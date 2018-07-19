@@ -1,0 +1,767 @@
+---------------------------------------------------------------
+[ 2018-07-17T16:42:47+08:00 ] 127.0.0.1 GET /login/
+[ info ] fen.beaconway.cn/login/ [运行时间：0.024001s][吞吐率：41.66req/s] [内存消耗：1,018.74kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:42:54+08:00 ] 127.0.0.1 GET /login/111
+[ info ] fen.beaconway.cn/login/111 [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,043.98kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '111',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:43:32+08:00 ] 127.0.0.1 GET /login/111
+[ info ] fen.beaconway.cn/login/111 [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：1,044.20kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '111',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:43:34+08:00 ] 127.0.0.1 GET /login/111
+[ info ] fen.beaconway.cn/login/111 [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：1,044.20kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '111',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:43:37+08:00 ] 127.0.0.1 GET /login/
+[ info ] fen.beaconway.cn/login/ [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：1,018.39kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:45:02+08:00 ] 127.0.0.1 GET /login/
+[ info ] fen.beaconway.cn/login/ [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,018.97kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:45:04+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,043.42kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:45:31+08:00 ] 127.0.0.1 GET /hello/1
+[ info ] fen.beaconway.cn/hello/1 [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：1,002.39kb] [文件加载：31]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'hello',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Index->hello[ E:\phpStudy\PHPTutorial\WWW\fen\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:45:51+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,043.82kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:47:04+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,044.02kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:49:39+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,044.41kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T16:49:40+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,044.41kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:03:46+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：735.29kb] [文件加载：31]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected ';', expecting ']'[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:16]
+---------------------------------------------------------------
+[ 2018-07-17T17:04:09+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：735.47kb] [文件加载：32]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Route' not found[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:11]
+---------------------------------------------------------------
+[ 2018-07-17T17:11:55+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：735.47kb] [文件加载：32]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Route' not found[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:11]
+---------------------------------------------------------------
+[ 2018-07-17T17:13:48+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：735.47kb] [文件加载：32]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Route' not found[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:11]
+---------------------------------------------------------------
+[ 2018-07-17T17:14:06+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.033001s][吞吐率：30.30req/s] [内存消耗：1,037.98kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:14:10+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,012.05kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:14:11+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,012.72kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:20:40+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,012.72kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:20:41+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,012.72kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:20:43+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,012.72kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:21:04+08:00 ] 127.0.0.1 GET /login
+[ info ] fen.beaconway.cn/login [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,036.84kb] [文件加载：36]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:21:35+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：735.18kb] [文件加载：31]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected ';', expecting ']'[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:16]
+---------------------------------------------------------------
+[ 2018-07-17T17:22:14+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：735.38kb] [文件加载：31]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected ';', expecting ']'[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:16]
+---------------------------------------------------------------
+[ 2018-07-17T17:22:17+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：735.38kb] [文件加载：31]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected ';', expecting ']'[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:16]
+---------------------------------------------------------------
+[ 2018-07-17T17:22:27+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：735.56kb] [文件加载：32]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Route' not found[E:\phpStudy\PHPTutorial\WWW\fen\application\route.php:13]
+---------------------------------------------------------------
+[ 2018-07-17T17:23:04+08:00 ] 127.0.0.1 GET /login/1
+[ info ] fen.beaconway.cn/login/1 [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：803.75kb] [文件加载：25]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Login->login[ E:\phpStudy\PHPTutorial\WWW\fen\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T17:23:08+08:00 ] 127.0.0.1 GET /login/dsadas
+[ info ] fen.beaconway.cn/login/dsadas [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,015.34kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'dsadas',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-17T20:39:28+08:00 ] 127.0.0.1 GET /login/dsadas
+[ info ] fen.beaconway.cn/login/dsadas [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,031.56kb] [文件加载：34]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:id[E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2018-07-17T20:39:33+08:00 ] 127.0.0.1 GET /login/%E5%A4%A7%E6%92%92%E6%97%A6%E6%92%92%E6%97%A6
+[ info ] fen.beaconway.cn/login/%E5%A4%A7%E6%92%92%E6%97%A6%E6%92%92%E6%97%A6 [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,031.59kb] [文件加载：34]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:id[E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2018-07-17T20:39:49+08:00 ] 127.0.0.1 GET /login/%E5%A4%A7%E6%92%92%E6%97%A6%E6%92%92%E6%97%A6
+[ info ] fen.beaconway.cn/login/%E5%A4%A7%E6%92%92%E6%97%A6%E6%92%92%E6%97%A6 [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,031.79kb] [文件加载：34]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=313525248; pgv_si=s1858109440; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh,zh-CN;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fen.beaconway.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:id[E:\phpStudy\PHPTutorial\WWW\fen\thinkphp\library\think\App.php:431]
