@@ -1,0 +1,243 @@
+{include file="public/header" /}
+
+	<div id="content">
+	<div class="container-fluid">
+	<div class="row-fluid">
+	<div class="span6">
+		<div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该用户的上级</font></font></h5>
+        </div>
+        <div class="widget-content nopadding">
+          <form class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上级用户 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" {eq name="$info.father.username" value=""} value="无上级"{else/} value="{$info.father.username}"{/eq}  class="span11" placeholder="上级用户名">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上级用户角色 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" {eq name="$info.father.name" value=""} value="无上级"{else/} value="{$info.father.name}"{/eq} class="span11" placeholder="上级代理角色">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+	
+      <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改用户数据</font></font></h5>
+        </div>
+        <div class="widget-content nopadding">
+		   
+          <form action="" method="post" class="form-horizontal" >
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信头像 ：</font></font></label>
+              <div class="controls">
+                <img style="width:50px" {eq name="$info.self.img" value=""} src="zwt.jpg" {else/} src="{$info.self.img}" {/eq}/>
+              </div>
+            </div>
+		  
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信昵称 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="wxname" value="{$info.self.wxname}" class="span11" placeholder="微信昵称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性别 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="sex" value="{$info.self.sex}" class="span11" placeholder="性别">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openid ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="openid" value="{$info.self.openid}" class="span11" placeholder="openid">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户姓名 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="username" value="{$info.self.username}" class="span11" placeholder="用户姓名">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手机号 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="phone" value="{$info.self.phone}" class="span11" placeholder="手机号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">身份证号 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="idcode" value="{$info.self.idcode}" class="span11" placeholder="身份证号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信号 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="weicode" value="{$info.self.weicode}" class="span11" placeholder="微信号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户角色 ：</font></font></label>
+              <div class="controls">
+				<input name="type" value="1" type="radio" {eq name="$info.self.type" value="1"} checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;平台管理员<br/><br/>
+                <input name="type" value="0" type="radio" {eq name="$info.self.type" value="0"} checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;客户
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">核审状态 ：</font></font></label>
+              <div class="controls">
+				<input name="static"  value="1" type="radio" {eq name="$info.self.static" value="1"}checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;通过<br/><br/>
+                <input name="static" value="0" type="radio" {eq name="$info.self.static" value="0"}checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;拒绝<br/><br/>
+				<input name="static" value="2" type="radio" {eq name="$info.self.static" value="2"} checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;审核中<br/><br/>
+				<input name="static" value="3" type="radio" {eq name="$info.self.static" value="3"} checked {else/} {/eq}>&nbsp;&nbsp;&nbsp;&nbsp;未审核<br/><br/>
+              </div>
+            </div>
+			
+			
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">余额 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="money" value="{$info.self.money}" class="span11" placeholder="余额">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">返现金额 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="balance" value="{$info.self.balance}" class="span11" placeholder="返现金额">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色名称 ：</font></font></label>
+              <div class="controls">
+				<select name="agent_id">
+					{volist name="agent" id="vo"}
+					<option value="{$vo.id}" {eq name="$info.self.agent_id" value="$vo.id"}selected {else/}{/eq} />{$vo.name}
+					{/volist}
+				</select>
+               
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建时间 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="create_time" value="{$info.self.create_time}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最后登录时间 ：</font></font></label>
+              <div class="controls">
+                <input disabled type="text" name="login_time" value="{$info.self.login_time}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+            <div class="form-actions">
+              <button type="submit" class="btn btn-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+    </div>
+	
+	<div class="span6">
+      <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+            <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下级用户</font></font></h5>
+            <a ><span class="label label-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span> </div></a>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+				  <th style="width:40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">序号</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">头像</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信昵称</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户名称</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户手机</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户角色</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">审核状态</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册时间</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操作</font></font></th>
+                </tr>
+              </thead>
+              <tbody>
+				{volist name="info.downline" id="vo"}
+                <tr>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.id}</font></font></td>
+                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.img}</font></font></td>
+                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.wxname}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.username}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.phone}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.name}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{eq name="vo.type" value="1"}<span style="color:red">平台管理员</span>{else/}<span style="color:green">客户</span>{/eq}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+						{switch name="vo.static" }
+							{case value="0" break="1"}<span style="color:red">拒绝</span>{/case}
+							{case value="1" break="1"}<span style="color:green">通过</span>{/case}
+							{case value="2" break="1"}<span style="color:blue">审核中</span>{/case}
+							{case value="3" break="1"}<span style="color:#333">未审核</span>{/case}
+						{/switch}
+				  </font></font></td>
+                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.create_time}</font></font></td>
+				  <td style="text-align:center;">
+					<a href="{:url('User/edit',['id'=>$vo.id])}"><button class="btn btn-primary btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></button></a>
+					&nbsp;&nbsp;
+					<a href="{:url('User/del',['id'=>$vo.id])}"><button class="btn btn-danger btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></button></a>
+				  </td>
+                </tr>
+                {/volist}
+              </tbody>
+            </table>
+          </div>
+			
+		  </div>
+      
+      
+    </div>
+	
+	
+	</div>
+	</div>
+	</div>
+<script src="js/excanvas.min.js"></script> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.flot.min.js"></script> 
+<script src="js/jquery.flot.resize.min.js"></script> 
+<script src="js/jquery.peity.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.dashboard.js"></script> 
+<script src="js/jquery.gritter.min.js"></script> 
+<script src="js/matrix.chat.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script src="js/matrix.form_validation.js"></script> 
+<script src="js/jquery.wizard.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/matrix.popover.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.tables.js"></script> 
+</body>
+</html>

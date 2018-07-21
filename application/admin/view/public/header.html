@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<base href="/static/admin/"/>
+<title>后台管理</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/fullcalendar.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/jquery.gritter.css" />
+<style>
+.pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}
+.pagination .active{background-color: #dd1a20;color: #fff;}
+.pagination .disabled{color:#aaa;}
+</style>
+</head>
+<body>
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html"></a></h1>
+</div>
+<!--close-Header-part--> 
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">欢迎您： {$Think.session.A['username']}</span><b class="caret"></b></a>
+    </li>
+    <li class=""><a title="" href="{:url('Login/cinfo')}"><i class="icon icon-cog"></i> <span class="text">信息设置</span></a></li>
+    <li class=""><a title="" href="{:url('Login/singOut')}"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+	<li class=""><a title="" > <span class="text">您上次登陆时间：{$Think.session.A['login_time']}</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+<!--sidebar-menu-->
+  <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 仪表板</font></font></a>
+  <ul style="display: block;">
+    <li> <a href="{:url('Pro/index')}"><i class="icon icon-leaf"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品管理</font></font></span></a> </li>
+	<li> <a href="{:url('Agent/index')}"><i class="icon icon-sitemap"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理设置</font></font></span></a> </li>
+	<li> <a href="{:url('User/index')}"><i class="icon icon-user"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户管理</font></font></span></a> </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订单管理</font></font></span> </a>
+      <ul>
+        <li><a href="{:url('Order/index')}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已发货</font></font></a></li>
+        <li><a href="{:url('Order/un')}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">未发货</font></font></a></li>
+        
+      </ul>
+	</li>
+  </ul>
+</div>
+</div>
