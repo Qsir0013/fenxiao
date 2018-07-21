@@ -7,7 +7,7 @@ class Agent extends Model
 {
     public function index()
     {
-		$data = findMorePg('agent',[],'*','id','','id desc',10);
+		$data = findMorePg('agent',[],'*','id','','discount ',10);
 		$data = isset($data)&&!empty($data)?$data:'';
 		return $data;
     }

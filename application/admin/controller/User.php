@@ -19,7 +19,7 @@ class User extends Base
 			$user->edit();
 			$this->success('该条数据修改成功','User/index');
 		}else{
-			$this->assign('info',$user->show());
+			$this->assign(['info'=>$user->show(),'agent'=>$user->agent()]);
 			return $this->fetch();
 		}
 	}

@@ -10,7 +10,7 @@ class User extends Model
 		$join = [
 			['agent ag','a.agent_id = ag.id'],
 		];
-		$data = findMorePg('user',$join,'a.id,img,wxname,username,phone,a.create_time,name','a.id','','a.create_time desc',10);
+		$data = findMorePg('user',$join,'a.id,img,wxname,username,phone,a.create_time,type,static,name','a.id','','a.create_time desc',10);
 		$data = isset($data)&&!empty($data)?$data:'';
 		return $data;
     }
@@ -28,7 +28,7 @@ class User extends Model
 	public function edit()
 	{
 		$data = $_POST;
-		if(checkData('User',$data,'edit')){
+		if(checkData('User',$data,'')){
 			edit('user',['id'=>input('id')],$data);
 		}
 	}
@@ -38,8 +38,15 @@ class User extends Model
 		$join = [
 			['agent ag','a.agent_id = ag.id'],
 		];
-		$data['self'] = findone('user',$join,'a.id,img,wxname,sex,openid,a.login_time,username,phone,idcode,weicode,type,static,money,balance,a.create_time,name',['a.id'=>input('id')]);
-		$data['downline'] = findMore('user',$join,'a.id,img,wxname,sex,openid,a.login_time,username,phone,idcode,weicode,type,static,money,balance,a.create_time,name',['pid'=>input('id')],'a.create_time desc','');
+		
+		$data['self'] = findone('user',[],'a.id,a.img,wxname,sex,openid,pid,a.login_time,username,phone,idcode,weicode,type,static,money,balance,a.create_time,agent_id',['a.id'=>input('id')]);
+		$data['father'] = findone('user',$join,'username,name',['a.id'=>$data['self']['pid']],'','');
+		$data['downline'] = findMore('user',$join,'a.id,img,wxname,username,phone,a.create_time,type,static,name',['pid'=>input('id')],'a.create_time desc','');
 		return $data;
+	}
+	
+	public function agent()
+	{
+		return findMore('agent',[],'id,name','','discount ','');
 	}
 }

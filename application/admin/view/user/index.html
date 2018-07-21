@@ -18,6 +18,8 @@
                   <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户名称</font></font></th>
 				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户手机</font></font></th>
 				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户角色</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">审核状态</font></font></th>
 				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册时间</font></font></th>
 				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操作</font></font></th>
                 </tr>
@@ -31,6 +33,15 @@
 				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.username}</font></font></td>
 				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.phone}</font></font></td>
 				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.name}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{eq name="vo.type" value="1"}<span style="color:red">平台管理员</span>{else/}<span style="color:green">客户</span>{/eq}</font></font></td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+						{switch name="vo.static" }
+							{case value="0" break="1"}<span style="color:red">拒绝</span>{/case}
+							{case value="1" break="1"}<span style="color:green">通过</span>{/case}
+							{case value="2" break="1"}<span style="color:blue">审核中</span>{/case}
+							{case value="3" break="1"}<span style="color:#333">未审核</span>{/case}
+						{/switch}
+				  </font></font></td>
                   <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.create_time}</font></font></td>
 				  <td style="text-align:center;">
 					<a href="{:url('User/edit',['id'=>$vo.id])}"><button class="btn btn-primary btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></button></a>
