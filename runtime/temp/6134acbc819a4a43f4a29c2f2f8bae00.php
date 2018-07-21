@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:80:"E:\phpStudy\PHPTutorial\WWW\fen\public/../application/admin\view\user\index.html";i:1532071067;s:73:"E:\phpStudy\PHPTutorial\WWW\fen\application\admin\view\public\header.html";i:1532054692;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"E:\phpStudy\PHPTutorial\WWW\fen\public/../application/admin\view\pro\add.html";i:1532158415;s:73:"E:\phpStudy\PHPTutorial\WWW\fen\application\admin\view\public\header.html";i:1532054692;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -57,49 +57,55 @@
 	<div id="content">
 	<div class="container-fluid">
 	<div class="row-fluid">
-	<div class="span12">
+	<div class="span6">
       <div class="widget-box">
-          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-            <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户</font></font></h5>
-            <a ><span class="label label-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span> </div></a>
-          <div class="widget-content nopadding">
-            <table class="table table-bordered table-striped">
-              <thead>
-                <tr>
-				  <th style="width:40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">序号</font></font></th>
-                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">头像</font></font></th>
-                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信昵称</font></font></th>
-                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户名称</font></font></th>
-				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客户手机</font></font></th>
-				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色</font></font></th>
-				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册时间</font></font></th>
-				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操作</font></font></th>
-                </tr>
-              </thead>
-              <tbody>
-				<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                <tr>
-				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['id']; ?></font></font></td>
-                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['img']; ?></font></font></td>
-                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['wxname']; ?></font></font></td>
-				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['username']; ?></font></font></td>
-				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['phone']; ?></font></font></td>
-				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['name']; ?></font></font></td>
-                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $vo['create_time']; ?></font></font></td>
-				  <td style="text-align:center;">
-					<a href="<?php echo url('User/edit',['id'=>$vo['id']]); ?>"><button class="btn btn-primary btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></button></a>
-					&nbsp;&nbsp;
-					<a href="<?php echo url('User/del',['id'=>$vo['id']]); ?>"><button class="btn btn-danger btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></button></a>
-				  </td>
-                </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-              </tbody>
-            </table>
-          </div>
-			<?php if($list == ''): else: ?>
-				<div  class="list-page"><?php echo $list->render(); ?><p>共<?php echo $list->total(); ?>条 <?php echo $list->currentPage(); ?>/<?php echo $list->lastPage(); ?> 页</p></div>
-			<?php endif; ?>
-		  </div>
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加新产品</font></font></h5>
+        </div>
+        <div class="widget-content nopadding">
+          <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品名称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="title" class="span11" placeholder="产品名称">
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品价格 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="price" class="span11" placeholder="产品价格">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品描述 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="des"  class="span11" placeholder="产品价格">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品首图</font></font></label>
+              <div class="controls">
+                <input type="file" name="banner" class="span11" placeholder="产品首图">
+				<img src="zwt.jpg" style="width:100px" />
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品详情</font></font></label>
+              <div class="controls">
+                <input type="file" name="content" class="span11" placeholder="产品详情">
+				<img src="zwt.jpg" style="width:200px" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></button>
+            </div>
+          </form>
+        </div>
+      </div>
       
       
     </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"E:\phpStudy\PHPTutorial\WWW\fen\public/../application/admin\view\login\cinfo.html";i:1531979491;s:73:"E:\phpStudy\PHPTutorial\WWW\fen\application\admin\view\public\header.html";i:1531972378;s:73:"E:\phpStudy\PHPTutorial\WWW\fen\application\admin\view\public\footer.html";i:1531973377;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:81:"E:\phpStudy\PHPTutorial\WWW\fen\public/../application/admin\view\login\cinfo.html";i:1531993138;s:73:"E:\phpStudy\PHPTutorial\WWW\fen\application\admin\view\public\header.html";i:1532054692;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -13,99 +13,83 @@
 <link rel="stylesheet" href="css/matrix-media.css" />
 <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/jquery.gritter.css" />
-
+<style>
+.pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}
+.pagination .active{background-color: #dd1a20;color: #fff;}
+.pagination .disabled{color:#aaa;}
+</style>
 </head>
 <body>
-
 <!--Header-part-->
 <div id="header">
   <h1><a href="dashboard.html"></a></h1>
 </div>
 <!--close-Header-part--> 
-
-
 <!--top-Header-menu-->
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a title="" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">欢迎您：<?php echo \think\Session::get('A')['username']; ?></span></a></li>
-    <li class=""><a title="修改信息" href="<?php echo url('Login/cinfo'); ?>"><i class="icon icon-cog"></i> <span class="text">修改信息</span></a></li>
-    <li class=""><a title="退出系统" href="<?php echo url('Login/singOut'); ?>"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">欢迎您： <?php echo \think\Session::get('A')['username']; ?></span><b class="caret"></b></a>
+    </li>
+    <li class=""><a title="" href="<?php echo url('Login/cinfo'); ?>"><i class="icon icon-cog"></i> <span class="text">信息设置</span></a></li>
+    <li class=""><a title="" href="<?php echo url('Login/singOut'); ?>"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+	<li class=""><a title="" > <span class="text">您上次登陆时间：<?php echo \think\Session::get('A')['login_time']; ?></span></a></li>
   </ul>
 </div>
 <!--close-top-Header-menu-->
-
 <!--sidebar-menu-->
-<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i>菜单</a>
-  <ul>
-    <li class="submenu"> <a href="#"><i class="icon icon-leaf"></i> <span>产品管理</span></a>
+  <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 仪表板</font></font></a>
+  <ul style="display: block;">
+    <li> <a href="<?php echo url('Pro/index'); ?>"><i class="icon icon-leaf"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品管理</font></font></span></a> </li>
+	<li> <a href="<?php echo url('Agent/index'); ?>"><i class="icon icon-sitemap"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理设置</font></font></span></a> </li>
+	<li> <a href="<?php echo url('User/index'); ?>"><i class="icon icon-user"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户管理</font></font></span></a> </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订单管理</font></font></span> </a>
       <ul>
-        <li><a href="<?php echo url('Pro/index'); ?>">产品列表</a></li>
+        <li><a href="form-common.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已发货</font></font></a></li>
+        <li><a href="form-validation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">未发货</font></font></a></li>
+        
       </ul>
-    </li>
-	<li class="submenu"> <a href="#"><i class="icon icon-user"></i> <span>用户管理</span></a>
-      <ul>
-        <li><a href="<?php echo url('User/index'); ?>">用户列表</a></li>
-      </ul>
-    </li>
-	<li class="submenu"> <a href="#"><i class="icon icon-arrow-down"></i> <span>代理管理</span></a>
-      <ul>
-        <li><a href="<?php echo url('Agent/index'); ?>">代理列表</a></li>
-      </ul>
-    </li>
+	</li>
   </ul>
 </div>
-<!--sidebar-menu-->
+</div>
 
-<!--main-container-part-->
-<div id="content">
-<!--breadcrumbs-->
-  <div id="content-header">
-    <div id="breadcrumb"> <a class="tip-bottom"><i class="icon-home"></i> </a></div>
-  </div>
-<!--End-breadcrumbs-->
-
-<!--Action boxes-->
-  
-<!--End-Action boxes-->    
-
-<!--Chart-box-->
 	<div id="content">
-	  <div class="container-fluid">
-	  <div class="row-fluid">
-      <div class="span6">
-        <div class="widget-box">
+	<div class="container-fluid">
+	<div class="row-fluid">
+	<div class="span6">
+      <div class="widget-box">
         <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
           <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人信息</font></font></h5>
         </div>
         <div class="widget-content nopadding">
           <form action="" method="post" class="form-horizontal">
             <div class="control-group">
-              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户名：</font></font></label>
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">名字 ：</font></font></label>
               <div class="controls">
                 <input type="text" name="username" class="span11" placeholder="First name">
               </div>
             </div>
             
             <div class="control-group">
-              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">新密码：</font></font></label>
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">密码输入</font></font></label>
               <div class="controls">
                 <input type="password" name="passwd" class="span11" placeholder="Enter Password">
               </div>
             </div>
+            
             <div class="form-actions">
               <button type="submit" class="btn btn-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></button>
             </div>
           </form>
         </div>
       </div>
-      </div>
-	  </div>
-	  </div>
-	  </div>
-  </div>
-</div>
-
-<!--end-main-container-part-->
+      
+      
+    </div>
+	</div>
+	</div>
+	</div>
 <script src="js/excanvas.min.js"></script> 
 <script src="js/jquery.min.js"></script> 
 <script src="js/jquery.ui.custom.js"></script> 
@@ -117,10 +101,37 @@
 <script src="js/matrix.js"></script> 
 <script src="js/matrix.dashboard.js"></script> 
 <script src="js/jquery.gritter.min.js"></script> 
+<script src="js/matrix.chat.js"></script> 
 <script src="js/jquery.validate.js"></script> 
 <script src="js/matrix.form_validation.js"></script> 
+<script src="js/jquery.wizard.js"></script> 
 <script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
 <script src="js/matrix.popover.js"></script> 
 <script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.tables.js"></script> 
+<script type="text/javascript">
+  // This function is called from the pop-up menus to transfer to
+  // a different page. Ignore if the value returned is a null string:
+  function goPage (newURL) {
+
+      // if url is empty, skip the menu dividers and reset the menu selection to default
+      if (newURL != "") {
+      
+          // if url is "-", it is this page -- reset the menu:
+          if (newURL == "-" ) {
+              resetMenu();            
+          } 
+          // else, send page to designated URL            
+          else {  
+            document.location.href = newURL;
+          }
+      }
+  }
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+</script>
 </body>
 </html>

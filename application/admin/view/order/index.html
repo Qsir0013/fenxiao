@@ -7,14 +7,15 @@
       <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
             <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品</font></font></h5>
-            <a href="{:url('Agent/add')}"><span class="label label-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加</font></font></span> </div></a>
+            <a href="{:url('Pro/add')}"><span class="label label-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加</font></font></span> </div></a>
           <div class="widget-content nopadding">
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-				  <th style="width:40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">序号</font></font></th>
-                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色</font></font></th>
-                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">优惠力度（折扣按百分比显示）</font></font></th>
+				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品名称</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品价格</font></font></th>
+                  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">浏览量</font></font></th>
                   <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加日期</font></font></th>
 				  <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操作</font></font></th>
                 </tr>
@@ -22,14 +23,15 @@
               <tbody>
 				{volist name="list" id="vo"}
                 <tr>
-				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.id}</font></font></td>
-                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.name}</font></font></td>
-                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.discount}</font></font></td>
+                  <td style="text-align:center;">{eq name="$vo.banner" value=""}<img style="width:30px" src="zwt.jpg"/>{else/}<img style="width:30px" src="__ROOT__/uploads/{$vo.banner}"/>{/eq}</td>
+				  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.title}</font></font></td>
+                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.price}</font></font></td>
+                  <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.num}</font></font></td>
                   <td style="text-align:center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{$vo.create_time}</font></font></td>
 				  <td style="text-align:center;">
-					<a href="{:url('Agent/edit',['id'=>$vo.id])}"><button class="btn btn-primary btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></button></a>
+					<a href="{:url('Pro/edit',['id'=>$vo.id])}"><button class="btn btn-primary btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></button></a>
 					&nbsp;&nbsp;
-					<a href="{:url('Agent/del',['id'=>$vo.id])}"><button class="btn btn-danger btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></button></a>
+					<a href="{:url('Pro/del',['id'=>$vo.id])}"><button class="btn btn-danger btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></button></a>
 				  </td>
                 </tr>
                 {/volist}

@@ -168,7 +168,7 @@ function del($table,$where)
 {
 	$data = Db::name($table)->where($where)->delete();
 	if($data){
-		return $data;
+		return true;
 	}else{
 		return false;
 	}
@@ -181,7 +181,7 @@ function edit($table,$where,$data)
 	if($data){
 		return $data;
 	}else{
-		msg('数据修改失败！');
+		msgback('数据未修改！');
 	}
 }
 
@@ -259,4 +259,17 @@ function code($code)
 function json($code,$data)
 {
 	return json_encode(['code'=>$code,'msg'=>$this->code($code),'res'=>$data]);
+}
+
+//上传文件
+function upFile($fileName)
+{
+	$file = request()->file($fileName);
+    $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+    if($info){
+		return $info->getSaveName();
+    }else{
+        msgback($file->getError());
+		die;
+    }
 }

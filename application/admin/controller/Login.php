@@ -17,7 +17,6 @@ class Login extends Controller
 		}else{
 			return $this->fetch();
 		}
-        
     }
 	
 	public function singOut()

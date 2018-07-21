@@ -1,0 +1,168 @@
+{include file="public/header" /}
+
+	<div id="content">
+	<div class="container-fluid">
+	<div class="row-fluid">
+	<div class="span6">
+      <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加新代理角色</font></font></h5>
+        </div>
+        <div class="widget-content nopadding">
+          <form action="" method="post" class="form-horizontal" >
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信头像 ：</font></font></label>
+              <div class="controls">
+                <img src="/zwt.jpg"/>{$info.img}
+				<input type="hidden" name="wxname" value="{$info.wxname}" class="span11" placeholder="微信头像">
+              </div>
+            </div>
+		  
+            <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信昵称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="wxname" value="{$info.wxname}" class="span11" placeholder="微信昵称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性别 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="sex" value="{$info.sex}" class="span11" placeholder="性别">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openid ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="openid" value="{$info.openid}" class="span11" placeholder="openid">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户姓名 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="username" value="{$info.username}" class="span11" placeholder="用户姓名">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手机号 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="phone" value="{$info.phone}" class="span11" placeholder="手机号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">身份证号 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="idcode" value="{$info.idcode}" class="span11" placeholder="身份证号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微信号 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="weicode" value="{$info.weicode}" class="span11" placeholder="微信号">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户角色 ：</font></font></label>
+              <div class="controls">
+                <label>
+                  <div class="radio" ><span><input type="radio" {eq name="$info.type" value="1"} checked {else/} {/eq} name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  平台管理员</font></font></label>
+                <label>
+                  <div class="radio" ><span class="checked"><input {eq name="$info.type" value="0"} checked {else/} {/eq} type="radio" name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  客户</font></font></label>
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">核审状态 ：</font></font></label>
+              <div class="controls">
+                <label>
+                  <div class="radio" ><span><input type="radio" {eq name="$info.type" value="1"} checked {else/} {/eq} name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  通过</font></font></label>
+                <label>
+                  <div class="radio" ><span class="checked"><input {eq name="$info.type" value="0"} checked {else/} {/eq} type="radio" name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  拒绝</font></font></label>
+				<label>
+                  <div class="radio" ><span class="checked"><input {eq name="$info.type" value="0"} checked {else/} {/eq} type="radio" name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  审核中</font></font></label>
+				<label>
+                  <div class="radio" ><span class="checked"><input {eq name="$info.type" value="0"} checked {else/} {/eq} type="radio" name="type" style="opacity: 0;"></span></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  未审核</font></font></label>
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色名称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="name" value="{$info.name}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色名称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="name" value="{$info.name}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色名称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="name" value="{$info.name}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代理角色名称 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="name" value="{$info.name}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最后登录时间 ：</font></font></label>
+              <div class="controls">
+                <input type="text" name="login_time" value="{$info.login_time}" class="span11" placeholder="代理角色名称">
+              </div>
+            </div>
+			
+            <div class="form-actions">
+              <button type="submit" class="btn btn-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+    </div>
+	</div>
+	</div>
+	</div>
+<script src="js/excanvas.min.js"></script> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.flot.min.js"></script> 
+<script src="js/jquery.flot.resize.min.js"></script> 
+<script src="js/jquery.peity.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.dashboard.js"></script> 
+<script src="js/jquery.gritter.min.js"></script> 
+<script src="js/matrix.chat.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script src="js/matrix.form_validation.js"></script> 
+<script src="js/jquery.wizard.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/matrix.popover.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.tables.js"></script> 
+</body>
+</html>
