@@ -10,7 +10,7 @@ Route::get('/index','api/Login/index'); //分销首页显示
 Route::get('/higher/:id','api/Login/higher'); //上级用户信息显示
 Route::get('/agent/:id','api/Login/agent'); //获取单个代理名称
 Route::get('/allagent','api/Login/allAgent'); //获取所有代理名称
-Route::rule('/get_qrcode/:id','api/Login/get_qrcode'); //获取二维码
+Route::get('/get_qrcode/:id','api/Login/get_qrcode'); //获取二维码
 Route::rule('/pass/:id','api/Login/pass'); //上级通过审核
 Route::rule('/out/:id','api/Login/out'); //上级拒绝审核
 
@@ -47,6 +47,8 @@ Route::delete('/address/:id','api/Address/addressDelete'); //删除
 
 /*微信支付*/
 Route::post('/wxpay','api/Wx/Wx_Pay');  //微信支付
-Route::post('/wxSpeech','api/Pro/wxSpeech');  //微信支付
-Route::get('/tixian/:id','api/Wx/tiXian');  //微信支付
+Route::post('/wxchong','api/Wx/Wx_Chongzhi');  //微信充值
+Route::post('/wxSpeech','api/Pro/wxSpeech');  //微信支付回调
+Route::post('/chongzhi','api/Pro/chongzhi');  //微信充值回调
+Route::get('/tixian/:id','api/Wx/tiXian');  //微信提现
 

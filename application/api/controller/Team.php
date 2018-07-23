@@ -49,16 +49,21 @@ class Team extends Rest
             ['user u','a.user_id = u.id'],
         ];
         $select = findMore('order',$join,'a.id,a.number,a.pro,a.num,total,logistics_static,a.create_time,is_delete',['u.pid'=>$id,'a.is_delete'=>1],'','');
-        foreach($select as $k =>$item){
-            $select_pro = findone('pro',[],'title,price,banner,content',['id'=>$item['pro']]);
-            $item['pro_item'] = $select_pro;
-            $data[] = $item;
-        }
-        if($data){
-            echo json(200,$data);
+        if($select){
+            foreach($select as $k =>$item){
+                $select_pro = findone('pro',[],'title,price,banner,content',['id'=>$item['pro']]);
+                $item['pro_item'] = $select_pro;
+                $data[] = $item;
+            }
+            if($data){
+                echo json(200,$data);
+            }else{
+                echo json(202,'');
+            }
         }else{
-            echo json(202,'');
+            echo json(404,'');
         }
+
     }
     /*我的待审核订单*/
     public function auditingOrderd($id)
@@ -99,6 +104,7 @@ class Team extends Rest
     public function auditingOrder($id)
     {
         $data = json_decode(Request::instance()->param()['id'],true);//传当前用户id 被审核者订单id
+
         $join = [
             ['user u','u.id = a.user_id'],
             ['agent ag','u.agent_id = ag.id']
@@ -119,7 +125,7 @@ class Team extends Rest
         }elseif($order2['agent_id'] == 6 ){ //当前用户为最高级
             $order2totle = (($order2['discount']/100) * $order1['total']) / ($order1['discount']/100);
             $differ =$order1['total'] - $order2totle;
-            Db::execute('update user set balance = balance + '.$differ.' where id = '.$data['user_id']);
+            Db::execute('update `fen_user` set balance = balance + '.$differ.' where id = '.$data['user_id']);
             $data1 = [
                 'user_id'=>$data['user_id'],
                 'event'=>'获得返利:收入'.$differ.'元',
@@ -143,7 +149,7 @@ class Team extends Rest
                 'create_time'=>date('Y-m-d : H:i:s')
             ];
             addId('transaction',$data1);
-            Db::execute('update user set balance = balance + '.$differ.' where id = '.$data['user_id']);
+            Db::execute('update `fen_user` set balance = balance + '.$differ.' where id = '.$data['user_id']);
             $edit = edit('order',['id'=>$data['order_id']],['pid'=>$order2['pid']]);
             if ($edit) {
                 echo json(200,"");

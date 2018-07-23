@@ -1,6 +1,7 @@
 <?php
 namespace app\api\controller;
 
+use think\Db;
 use think\Request;
 use think\controller\Rest;
 
@@ -69,6 +70,7 @@ class Wx extends Rest
             $tmp['signType'] = 'MD5';
             $tmp['timeStamp'] = "$time";
 
+            $data = [];
             $data['appId'] = $appid;
             $data['timeStamp'] = "$time";//时间戳
             $data['nonceStr'] = $nonce_str;//随机字符串
@@ -76,21 +78,94 @@ class Wx extends Rest
             $data['package'] = 'prepay_id='.$array['PREPAY_ID'];//统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=*
             $data['paySign'] = $this->sign($tmp);//签名,具体签名方案参见微信公众号支付帮助文档;
             $data['out_trade_no'] = $out_trade_no;
-            echo json_encode($data);
+            echo json_encode($data,true);
         }else{
-            if($array['return_code'] == 'FAIL'){
-                $info['return_msg'] = $array['return_msg'];
+            $info = [];
+            if($array['RETURN_CODE'] == 'FAIL'){
+                $info['return_msg'] = $array['RETURN_MSG'];
             }
-            if($array['result_code'] == 'FAIL'){
-                $info['err_code'] = $array['err_code'];
-                $info['err_code_des'] = $array['err_code_des'];
-            }
-            exit($info);
+            echo json_encode($info,true);
         }
-
     }
+    //微信支付
+    public function Wx_Chongzhi(){
+        $request=Request::instance();
+        $fee=$request->param('total');
+        $details= "余额充值";//商品的名称
+        $program = config('pay');
+        $appid =        $program['app_id'];//appid
+        $body =        $details;// '商品信息';//'【自己填写】'
+        $mch_id =       $program['mch_id'];//'你的商户号【自己填写】'
+        $nonce_str =    $this->nonce_str();//随机字符串
+        $notify_url =   'http://www.fen.com/chongzhi';//回调的url【自己填写】';
+        $openid =       openId($request->param('code'));//'用户的openid【自己填写】';
+        $out_trade_no = $request->param('user_id');//商户订单号
+        $spbill_create_ip = '192.168.1.196';//'服务器的ip【自己填写】';
+        $total_fee =    $fee;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
+        $trade_type = 'JSAPI';//交易类型 默认
+        //这里是按照顺序的 因为下面的签名是按照顺序 排序错误 肯定出错
+        $post['appid'] = $appid;
+        $post['body'] = $body;
 
+        $post['mch_id'] = $mch_id;
 
+        $post['nonce_str'] = $nonce_str;//随机字符串
+
+        $post['notify_url'] = $notify_url;
+
+        $post['openid'] = $openid;
+
+        $post['out_trade_no'] = $out_trade_no;
+
+        $post['spbill_create_ip'] = $spbill_create_ip;//终端的ip
+
+        $post['total_fee'] = $total_fee;//总金额 最低为一块钱 必须是整数
+
+        $post['trade_type'] = $trade_type;
+        $sign = $this->sign($post);//签名
+        $post_xml = '<xml>
+                        <appid>'.$appid.'</appid>
+                        <body>'.$body.'</body>
+                        <mch_id>'.$mch_id.'</mch_id>
+                        <nonce_str>'.$nonce_str.'</nonce_str>
+                        <notify_url>'.$notify_url.'</notify_url>
+                        <openid>'.$openid.'</openid>
+                        <out_trade_no>'.$out_trade_no.'</out_trade_no>
+                        <spbill_create_ip>'.$spbill_create_ip.'</spbill_create_ip>
+                        <total_fee>'.$total_fee.'</total_fee>
+                        <trade_type>'.$trade_type.'</trade_type>
+                        <sign>'.$sign.'</sign>
+                    </xml> ';
+        //统一接口prepay_id
+        $url = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
+        $xml = postXmlCurl($post_xml,$url);
+        $array = $this->xml($xml);//全要大写
+        if($array['RETURN_CODE'] == 'SUCCESS' && $array['RESULT_CODE'] == 'SUCCESS'){
+            $time = time();
+            $tmp=[];//临时数组用于签名
+            $tmp['appId'] = $appid;
+            $tmp['nonceStr'] = $nonce_str;
+            $tmp['package'] = 'prepay_id='.$array['PREPAY_ID'];
+            $tmp['signType'] = 'MD5';
+            $tmp['timeStamp'] = "$time";
+
+            $data = [];
+            $data['appId'] = $appid;
+            $data['timeStamp'] = "$time";//时间戳
+            $data['nonceStr'] = $nonce_str;//随机字符串
+            $data['signType'] = 'MD5';//签名算法，暂支持 MD5
+            $data['package'] = 'prepay_id='.$array['PREPAY_ID'];//统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=*
+            $data['paySign'] = $this->sign($tmp);//签名,具体签名方案参见微信公众号支付帮助文档;
+            $data['out_trade_no'] = $out_trade_no;
+            echo json_encode($data,true);
+        }else{
+            $info = [];
+            if($array['RETURN_CODE'] == 'FAIL'){
+                $info['return_msg'] = $array['RETURN_MSG'];
+            }
+            echo json_encode($info,true);
+        }
+    }
     //提现
     public function tiXian($id){
         $request = json_decode(Request::instance()->param()['id'],true);
@@ -98,8 +173,7 @@ class Wx extends Rest
         $appid = $program['app_id'];//商户账号appid
         $secret = $program['secret'];//api密码
         $mch_id = $program['mch_id'];//商户号
-        $openid = openId($request['code']);//授权用户openid
-
+        $openid = openId($request['code']);//授权用户openi
         $arr = array();
         $arr['mch_appid'] = $appid;
         $arr['mchid'] = $mch_id;
@@ -116,7 +190,6 @@ class Wx extends Rest
 
         $url = "https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers";
         $xml = $this->curl_post_ssl($url,$var);
-        var_dump($xml);die;
         $rdata = simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA);
         ;
         $return_code = (string)$rdata->return_code;
@@ -125,10 +198,39 @@ class Wx extends Rest
         $result_code = trim(strtoupper($result_code));
 
         if ($return_code == 'SUCCESS' && $result_code == 'SUCCESS') {
-            $isrr = array(
-                'con'=>'ok',
-                'error' => 0,
-            );
+            Db::startTrans();
+            $result = Db::execute('update `fen_user` set balance = balance - '.$request['money'].' where id = '.$request['user_id']);
+            if($result){
+                $data = [
+                    'user_id'=>$request['user_id'],
+                    'event'=>'提现返现:支出'.$request['money'].'元',
+                    'money'=>$request['money'],
+                    'create_time'=>date('Y-m-d : H:i:s')
+                ];
+                $insert = addId('transaction',$data);
+                if($insert){
+                    Db::commit();
+                    $isrr = array(
+                        'con'=>'ok',
+                        'error' => 0,
+                    );
+                }else{
+                    Db::rollback();
+                    $returnmsg = (string)$rdata->return_msg;
+                    $isrr = array(
+                        'error' => 1,
+                        'errmsg' => $returnmsg,
+                    );
+                }
+            }else{
+                Db::rollback();
+                $returnmsg = (string)$rdata->return_msg;
+                $isrr = array(
+                    'error' => 1,
+                    'errmsg' => $returnmsg,
+                );
+            }
+
         } else {
             $returnmsg = (string)$rdata->return_msg;
             $isrr = array(

@@ -97,7 +97,7 @@ class Pro extends Rest
         $price = $pro['total'];
         $money = findone('user',[],'money',['id'=>$pro['user_id']]);
         if($money['money'] > $price){
-            $result = Db::execute('update user set money = money - '.$price.' where id = '.$pro['user_id']);
+            $result = Db::execute('update fen_user set money = money - '.$price.' where id = '.$pro['user_id']);
             if($result){
                 $data = [
                     'user_id'=>$pro['user_id'],
@@ -142,9 +142,16 @@ class Pro extends Rest
         $user_sign = strtoupper(md5($post_data));   //再次生成签名，与$postSign比较
 
 
-        $order_status = findone('order',[],'status',['number'=>$post_data['out_trade_no']]);
-
+        $order_status = findone('order',[],'status,user_id,price',['number'=>$post_data['out_trade_no']]);
         if($post_data['return_code']=='SUCCESS'&&$postSign){
+
+            $data = [
+                'user_id'=>$order_status['user_id'],
+                'event'=>'购买商品:支出'.$order_status['price'].'元',
+                'money'=>$order_status['price'],
+                'create_time'=>date('Y-m-d : H:i:s')
+            ];
+            $insert = addId('transaction',$data);
             /*
             * 首先判断，订单是否已经更新为ok，因为微信会总共发送8次回调确认
             * 其次，订单已经为ok的，直接返回SUCCESS
@@ -157,6 +164,45 @@ class Pro extends Rest
                     $this->return_success();
                 }
             }
+        }else{
+            echo '微信支付失败';
+        }
+    }
+    /* 微信支付完成，回调地址url方法  */
+    public function chongzhi(){
+        $post = $_REQUEST;    //接受POST数据XML个数
+        if($post==null){
+            $post = file_get_contents("php://input");
+        }
+        $post_data = $this->xml_to_array($post);   //微信支付成功，返回回调地址url的数据：XML转数组Array
+        $postSign = $post_data['sign'];
+        unset($post_data['sign']);
+
+        /* 微信官方提醒：
+         *  商户系统对于支付结果通知的内容一定要做【签名验证】,
+         *  并校验返回的【订单金额是否与商户侧的订单金额】一致，
+         *  防止数据泄漏导致出现“假通知”，造成资金损失。
+         */
+        ksort($post_data);// 对数据进行排序
+        $str = $this->ToUrlParams($post_data);//对数组数据拼接成key=value字符串
+        $user_sign = strtoupper(md5($post_data));   //再次生成签名，与$postSign比较
+
+
+        if($post_data['return_code']=='SUCCESS'&&$postSign){
+            /*
+            * 首先判断，订单是否已经更新为ok，因为微信会总共发送8次回调确认
+            * 其次，订单已经为ok的，直接返回SUCCESS
+            * 最后，订单没有为ok的，更新状态为ok，返回SUCCESS
+            */
+            $data = [
+                'user_id'=>$post_data['out_trade_no'],
+                'event'=>'购买商品:支出'.$post_data['total_fee'].'元',
+                'money'=>$post_data['total_fee'],
+                'create_time'=>date('Y-m-d : H:i:s')
+            ];
+            $insert = addId('transaction',$data);
+            $this->return_success();
+
         }else{
             echo '微信支付失败';
         }

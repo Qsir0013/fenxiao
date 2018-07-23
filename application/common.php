@@ -181,7 +181,7 @@ function edit($table,$where,$data)
 	if($data){
 		return $data;
 	}else{
-		msgback('数据未修改！');
+		return false;
 	}
 }
 

@@ -2,6 +2,7 @@
 namespace app\api\controller;
 
 use think\Session;
+use think\Loader;
 use think\Request;
 use think\controller\Rest;
 
@@ -53,35 +54,44 @@ class Login extends Rest
         }
     }
 
+
     //获得二维码
     public function get_qrcode($id) {
         $data = json_decode(Request::instance()->param()['id'],true);
-        header('content-type:image/gif');
-        //header('content-type:image/png');格式自选，不同格式貌似加载速度略有不同，想加载更快可选择jpg
-        //header('content-type:image/jpg');
-        $uid = 6;//参数
-        $data = array();
-        $data['scene'] = "uid=" . $uid;
-        $data['page'] = "pages/index/index";
-        $data = json_encode($data);
-        $access_token = wxToken();
-        $url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=" . $access_token;
-        $this->get_http_array($url,$data);
-        //这里强调显示二维码可以直接写该访问路径，同时也可以使用curl保存到本地，详细用法可以加群或者加我扣扣
-    }
-    public function get_http_array($url,$post_data) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);   //没有这个会自动输出，不用print_r();也会在后面多个1
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
-        $output = curl_exec($ch);
-        curl_close($ch);
-        $out = json_decode($output);
-        return $out;
+        $token = wxToken();
+        $url="https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=".$token;
+        $post_data=
+            array(
+                'page'=>'pages/registered/registered',
+                'scene'=>$data['scene']
+            );
+        $post_data=json_encode($post_data);
+        $data=$this->send_post($url,$post_data);
+        $result=$this->data_uri($data,'image/png');
+        return $result;
     }
 
+    //二进制转图片image/png
+    public function data_uri($contents, $mime)
+    {
+        $base64   = base64_encode($contents);
+        return ('data:' . $mime . ';base64,' . $base64);
+    }
+    protected function send_post( $url, $post_data ) {
+        $options = array(
+            'http' => array(
+                'method'  => 'POST',
+                'header'  => 'Content-type:application/json',
+                //header 需要设置为 JSON
+                'content' => $post_data,
+                'timeout' => 60
+                //超时时间
+            )
+        );
+        $context = stream_context_create( $options );
+        $result = file_get_contents( $url, false, $context );
+        return $result;
+    }
     /*分销首页*/
     public function index()
     {
@@ -92,7 +102,7 @@ class Login extends Rest
             $find = findone('user',[],'id,username',['openid'=>$openid]);
             if($find){
                 if($find['username']){
-                    echo json(200,['index'=>1]);
+                    echo json(200,['index'=>1,'user_id'=>$find['id']]);
                 }else{
                     echo json(200,['index'=>0]);
                 }
@@ -106,18 +116,22 @@ class Login extends Rest
                 $arr['sex'] = $sex;
                 $insert = addId('user', $arr);
                 if($insert){
-                    echo json(200,['index'=>0]);
+                    echo json(200,['index'=>0,'user_id'=>$insert]);
                 }else{
                     echo json(202,'');
                 }
             }
         }else{//扫码进入
             $code = $data['code'];
+            $data['scene'] = "1&2";
+            $a = explode("&",$data['scene']);
+            $user_id = $a[0];
+            $level = $a[1];
             $openid = openId($code);
             $data['openid'] = $openid;
             $find = findone('user',[],'id,username',['openid'=>$openid]);
             if($find){
-                echo json(200,['index'=>2,'p_id'=>$data['p_id'],'r_id'=>$data['r_id']]);
+                echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$find['id']]);
             }else{
                 $arr['openid'] = $openid;
                 $nick = $_GET['nick'];
@@ -128,7 +142,7 @@ class Login extends Rest
                 $arr['sex'] = $sex;
                 $insert = addId('user', $arr);
                 if($insert){
-                    echo json(200,['index'=>2,'p_id'=>$data['p_id'],'r_id'=>$data['r_id']]);
+                    echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$insert]);
                 }else{
                     echo json(202,'');
                 }
@@ -151,7 +165,7 @@ class Login extends Rest
         ];
         $insert1 = addId('address', $addressArr);
         if ($insert && $insert1) {
-            echo json(200, '');
+            echo json(200, ['user_id'=>$insert]);
         } else {
             echo json(202, '');
         }
