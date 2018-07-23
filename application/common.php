@@ -80,7 +80,7 @@ function isMobile()
 function msgback($msg)
 {
 	echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
-	echo "<script>alert('$msg');window.location.href=history.go(-1);  </script>";
+	echo "<script>alert('$msg');window.history.back();  </script>";
 }
 
 //查询条数
@@ -240,6 +240,9 @@ function code($code)
 		case 201:
 		return '操作成功！';
 		break;
+		case 202:
+		return '请求失败！';
+		break;
 		case 204 :
 		return '删除成功！';
 		break;
@@ -252,13 +255,16 @@ function code($code)
 		case 404 :
 		return '暂无资源！';
 		break;
+		case 422 :
+		return '异常请求！';
+		break;
 	}
 }
 
-//返回json数据
 function json($code,$data)
 {
-	return json_encode(['code'=>$code,'msg'=>$this->code($code),'res'=>$data]);
+	$data =['code'=>$code,'msg'=>code($code),'res'=>$data];
+	return json_encode($data);
 }
 
 //上传文件
@@ -272,4 +278,81 @@ function upFile($fileName)
         msgback($file->getError());
 		die;
     }
+}
+
+
+/*获取微信token*/
+function wxToken()
+{
+	$program = config('program');
+	$appid = $program['appid'];
+	$secret = $program['secret'];
+	$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$secret;
+	$info = file_get_contents($url);
+	$token = json_decode($info,true);
+	return $token['access_token'];
+}
+
+/*curl post模拟请求数据*/
+function postCurl($url, $option, $header = 0, $type = 'POST') {
+	$curl = curl_init (); // 启动一个CURL会话
+	curl_setopt ( $curl, CURLOPT_URL, $url ); // 要访问的地址
+	curl_setopt ( $curl, CURLOPT_SSL_VERIFYPEER, FALSE ); // 对认证证书来源的检查
+	curl_setopt ( $curl, CURLOPT_SSL_VERIFYHOST, FALSE ); // 从证书中检查SSL加密算法是否存在
+	curl_setopt ( $curl, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)' ); // 模拟用户使用的浏览器
+	if (! empty ( $option )) {
+		$options = json_encode ( $option );
+		curl_setopt ( $curl, CURLOPT_POSTFIELDS, $options ); // Post提交的数据包
+	}
+	curl_setopt ( $curl, CURLOPT_TIMEOUT, 30 ); // 设置超时限制防止死循环
+	curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, 1 ); // 获取的信息以文件流的形式返回
+	curl_setopt ( $curl, CURLOPT_CUSTOMREQUEST, $type );
+	$result = curl_exec ( $curl ); // 执行操作
+
+
+	curl_close ( $curl ); // 关闭CURL会话
+	return $result;
+}
+function postXmlCurl($xml, $url, $useCert = false, $second = 30)
+{
+//初始化curl
+	$ch = curl_init();
+	curl_setopt($ch,CURLOPT_URL, $url);
+	curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);
+	curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,FALSE);
+//设置header
+	curl_setopt($ch, CURLOPT_HEADER, FALSE);
+//要求结果为字符串且输出到屏幕上
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+//post提交方式
+	curl_setopt($ch, CURLOPT_POST, TRUE);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
+//运行curl
+	$data = curl_exec($ch);
+	curl_close($ch);
+//返回结果
+	if($data)
+	{
+		echo $data;
+		return $data;
+	} else {
+		$error = curl_errno($ch);
+		echo "curl出错，错误码:$error"."<br>";
+		echo "<a href='http://curl.haxx.se/libcurl/c/libcurl-errors.html'>错误原因查询</a></br>";
+		curl_close($ch);
+		return false;
+	}
+}
+/*获取open id*/
+function openId($code){
+	$program = config('program');
+	$appid = $program['appid'];
+	$secret = $program['secret'];
+	$url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' . $appid .'&secret=' . $secret .'&js_code=' . $code . '&grant_type=authorization_code';
+	$info = file_get_contents($url);
+	$json = json_decode($info);
+	$arr = get_object_vars($json);
+	$openid = $arr['openid'];
+//	$openid = "oHpuZ5Ths0LY6GDWEVBybZ6RfnxI";
+	return $openid;
 }
