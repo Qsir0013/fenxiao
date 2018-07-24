@@ -168,7 +168,7 @@ class Pro extends Rest
             echo '微信支付失败';
         }
     }
-    /* 微信支付完成，回调地址url方法  */
+    /* 微信充值完成，回调地址url方法  */
     public function chongzhi(){
         $post = $_REQUEST;    //接受POST数据XML个数
         if($post==null){
@@ -189,18 +189,22 @@ class Pro extends Rest
 
 
         if($post_data['return_code']=='SUCCESS'&&$postSign){
+            $result = Db::execute('update fen_user set money = money + '.$post_data['total_fee'].' where id = '.$post_data['out_trade_no']);
             /*
             * 首先判断，订单是否已经更新为ok，因为微信会总共发送8次回调确认
             * 其次，订单已经为ok的，直接返回SUCCESS
             * 最后，订单没有为ok的，更新状态为ok，返回SUCCESS
             */
-            $data = [
-                'user_id'=>$post_data['out_trade_no'],
-                'event'=>'购买商品:支出'.$post_data['total_fee'].'元',
-                'money'=>$post_data['total_fee'],
-                'create_time'=>date('Y-m-d : H:i:s')
-            ];
-            $insert = addId('transaction',$data);
+            if($result){
+                $data = [
+                    'user_id'=>$post_data['out_trade_no'],
+                    'event'=>'购买商品:支出'.$post_data['total_fee'].'元',
+                    'money'=>$post_data['total_fee'],
+                    'create_time'=>date('Y-m-d : H:i:s')
+                ];
+                $insert = addId('transaction',$data);
+            }
+
             $this->return_success();
 
         }else{

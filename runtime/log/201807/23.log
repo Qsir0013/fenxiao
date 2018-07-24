@@ -10222,3 +10222,194 @@ $1�v���q��' . "\0" . 'B�' . "\0" . '�9��
 )
 [ info ] [ RUN ] app\api\controller\Login->get_qrcode[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-23T19:39:40+08:00 ] 192.168.1.182 GET /index/?p_id=%22%22&r_id=%22%22&code=03306Z2a0RAnRw1TZc2a0viR2a006Z2D&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2
+[ info ] www.fen.com/index/?p_id=%22%22&r_id=%22%22&code=03306Z2a0RAnRw1TZc2a0viR2a006Z2D&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2 [运行时间：0.252014s][吞吐率：3.97req/s] [内存消耗：1,641.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807120 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '""',
+  'r_id' => '""',
+  'code' => '03306Z2a0RAnRw1TZc2a0viR2a006Z2D',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2018-07-23T19:39:48+08:00 ] 192.168.1.182 GET /index/?p_id=%22%22&r_id=%22%22&code=023o9GqG0CvR6j2SMUqG0AMHqG0o9GqB&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2
+[ info ] www.fen.com/index/?p_id=%22%22&r_id=%22%22&code=023o9GqG0CvR6j2SMUqG0AMHqG0o9GqB&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2 [运行时间：0.238014s][吞吐率：4.20req/s] [内存消耗：1,641.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807120 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '""',
+  'r_id' => '""',
+  'code' => '023o9GqG0CvR6j2SMUqG0AMHqG0o9GqB',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2018-07-23T19:39:58+08:00 ] 192.168.1.182 GET /index/?p_id=%22%22&r_id=%22%22&code=023Vqoco126O0j0TCMao1sNhco1Vqocj&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2
+[ info ] www.fen.com/index/?p_id=%22%22&r_id=%22%22&code=023Vqoco126O0j0TCMao1sNhco1Vqocj&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2 [运行时间：0.236014s][吞吐率：4.24req/s] [内存消耗：1,641.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807120 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '""',
+  'r_id' => '""',
+  'code' => '023Vqoco126O0j0TCMao1sNhco1Vqocj',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2018-07-23T19:42:46+08:00 ] 192.168.1.182 GET /index/?p_id=%22%22&r_id=%22%22&code=023FRqm21LmWvP1Y9Rj21nLwm21FRqm-&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2
+[ info ] www.fen.com/index/?p_id=%22%22&r_id=%22%22&code=023FRqm21LmWvP1Y9Rj21nLwm21FRqm-&nick=%E5%80%A9%E5%80%A9&avaurl=https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132&sex=2 [运行时间：0.252014s][吞吐率：3.97req/s] [内存消耗：1,697.48kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807120 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '""',
+  'r_id' => '""',
+  'code' => '023FRqm21LmWvP1Y9Rj21nLwm21FRqm-',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-23T19:42:48+08:00 ] 192.168.1.182 GET /proList/10
+[ info ] www.fen.com/proList/10 [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,699.68kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807120 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '10' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.001000s ]

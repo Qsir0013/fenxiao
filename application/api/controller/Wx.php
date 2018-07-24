@@ -87,7 +87,7 @@ class Wx extends Rest
             echo json_encode($info,true);
         }
     }
-    //微信支付
+    //微信充值
     public function Wx_Chongzhi(){
         $request=Request::instance();
         $fee=$request->param('total');
