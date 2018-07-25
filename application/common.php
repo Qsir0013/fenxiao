@@ -352,7 +352,7 @@ function openId($code){
 	$info = file_get_contents($url);
 	$json = json_decode($info);
 	$arr = get_object_vars($json);
-	$openid = $arr['openid'];
-//	$openid = "oHpuZ5Ths0LY6GDWEVBybZ6RfnxI";
+//	$openid = $arr['openid'];
+	$openid = "oHpuZ5Ths0LY6GDWEVBybZ6RfnxI";
 	return $openid;
 }

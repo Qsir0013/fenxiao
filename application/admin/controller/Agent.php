@@ -14,7 +14,6 @@ class Agent extends Base
 	
 	public function add()
 	{
-		
 		$agent = new A;
 		if(request()->isPost()){
 			$agent->add();

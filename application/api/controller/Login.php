@@ -46,7 +46,7 @@ class Login extends Rest
     /*获取所有分销代理名称*/
     public function allAgent()
     {
-        $find = findMore('agent',[],'id,name','','','');;
+        $find = findMore('agent',[],'id,name,discount','','','');
         if ($find) {
             echo json(200,$find);
         } else {
@@ -96,42 +96,45 @@ class Login extends Rest
     public function index()
     {
         $data = $_GET;
-        if (empty($data['p_id']) && empty($data['r_id'])) {//直接进入
-            $code = $data['code'];
+	    $str = '""';
+        if ($data['p_id']===$str && $data['r_id']===$str) {//搜索进入，无上级二维码
+	        $code = $data['code'];
             $openid = openId($code);
-            $find = findone('user',[],'id,username',['openid'=>$openid]);
-            if($find){
-                if($find['username']){
-                    echo json(200,['index'=>1,'user_id'=>$find['id']]);
-                }else{
-                    echo json(200,['index'=>0]);
-                }
-            }else{
-                $arr['openid'] = $openid;
-                $nick = $_GET['nick'];
-                $imgUrl = $_GET['avaurl'];
-                $sex = $_GET['sex'];
-                $arr['wxname'] = $nick;
-                $arr['img'] = $imgUrl;
-                $arr['sex'] = $sex;
-                $insert = addId('user', $arr);
-                if($insert){
-                    echo json(200,['index'=>0,'user_id'=>$insert]);
-                }else{
-                    echo json(202,'');
-                }
+            $find = findone('user',[],'id,username,agent_id,openid,pid',['openid'=>$openid]);
+			if($find){
+				$map['id']  = ['<=',$find['agent_id']];
+				$agentList = findMore('agent',[],'id,name,discount',$map,'discount ','');
+				edit('user',['openid'=>$openid],['login_time'=>date("Y-m-d H:i:s")]);
+                echo json(200,['index'=>2,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id'],'agent'=>$agentList]);
+			}else{
+				$udata['wxname'] = $data['nick'];
+				$udata['openid'] = $openid; 
+				$udata['img'] = $data['avaurl'];
+				$udata['sex'] = $data['sex'];
+				$userId = addId('user',$udata);
+                echo json(200,['index'=>1,'p_id'=>'','r_id'=>1 ,'user_id'=>$userId,'agent'=>'']);
             }
         }else{//扫码进入
             $code = $data['code'];
-            $data['scene'] = "1&2";
+            $openid = openId($code);
+            $data['openid'] = $openid;
+            $find = findone('user',[],'id,username,agent_id',['openid'=>$openid]);
+	        $data['scene'] = isset($data['scene'])?$data['scene']:$find['id']."&1";
             $a = explode("&",$data['scene']);
             $user_id = $a[0];
             $level = $a[1];
-            $openid = openId($code);
-            $data['openid'] = $openid;
-            $find = findone('user',[],'id,username',['openid'=>$openid]);
+            $map['id']  = ['<=',$find['agent_id']];
+            $agentList = findMore('agent',[],'id,name,discount',$map,'discount ','');
+            $arr = [
+                'id'=> 0,
+                'name' =>'请选择',
+                'discount' =>0
+            ];
+            if($agentList!=''){
+                array_unshift($agentList,$arr);
+            }
             if($find){
-                echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$find['id']]);
+                echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$find['id'],'agent'=>$agentList]);
             }else{
                 $arr['openid'] = $openid;
                 $nick = $_GET['nick'];
@@ -140,12 +143,12 @@ class Login extends Rest
                 $arr['wxname'] = $nick;
                 $arr['img'] = $imgUrl;
                 $arr['sex'] = $sex;
-                $insert = addId('user', $arr);
-                if($insert){
-                    echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$insert]);
-                }else{
-                    echo json(202,'');
-                }
+//                $insert = addId('user', $arr);
+//                if($insert){
+                echo json(200,['index'=>1,'p_id'=>$user_id,'r_id'=>$level,'agent'=>'']);
+//                }else{
+//                    echo json(202,'');
+//                }
             }
         }
     }

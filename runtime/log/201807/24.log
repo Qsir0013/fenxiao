@@ -16051,3 +16051,633 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
 [ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:28:10+08:00 ] 127.0.0.1 GET /allagent/2
+[ info ] www.fen.com/allagent/2 [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,687.28kb] [文件加载：42]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'allAgent',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->allAgent[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.003001s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'id'  AND  = '>'  AND  = '2' ORDER BY `discount`' at line 1[D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-07-24T17:29:14+08:00 ] 127.0.0.1 GET /allagent/2
+[ info ] www.fen.com/allagent/2 [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,693.20kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'allAgent',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->allAgent[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` > 2 ORDER BY `discount` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:47:16+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.191011s][吞吐率：5.24req/s] [内存消耗：1,059.07kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: openid[D:\php\PHPTutorial\WWW\llll\application\common.php:355]
+---------------------------------------------------------------
+[ 2018-07-24T17:47:39+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.208012s][吞吐率：4.81req/s] [内存消耗：1,059.27kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: openid[D:\php\PHPTutorial\WWW\llll\application\common.php:355]
+---------------------------------------------------------------
+[ 2018-07-24T17:47:57+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.189011s][吞吐率：5.29req/s] [内存消耗：1,645.63kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` > 0 ORDER BY `discount` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:52:52+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.202012s][吞吐率：4.95req/s] [内存消耗：1,646.08kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` > 0 ORDER BY `discount` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:53:07+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.181011s][吞吐率：5.52req/s] [内存消耗：1,646.08kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` > 0 ORDER BY `discount` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:53:35+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.185011s][吞吐率：5.41req/s] [内存消耗：1,699.99kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` > 0 ORDER BY `discount` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-24T17:58:40+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.178010s][吞吐率：5.62req/s] [内存消耗：1,059.68kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: openid[D:\php\PHPTutorial\WWW\llll\application\common.php:355]
+---------------------------------------------------------------
+[ 2018-07-24T18:17:58+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.191011s][吞吐率：5.24req/s] [内存消耗：1,059.70kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: openid[D:\php\PHPTutorial\WWW\llll\application\common.php:355]
+---------------------------------------------------------------
+[ 2018-07-24T18:18:09+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.191011s][吞吐率：5.24req/s] [内存消耗：1,736.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 0 ORDER BY `discount` DESC [ RunTime:0.000000s ]
+[ error ] [2]array_unshift() expects parameter 1 to be array, string given[D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php:110]
+---------------------------------------------------------------
+[ 2018-07-24T18:20:36+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.209012s][吞吐率：4.78req/s] [内存消耗：1,698.93kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 0 ORDER BY `discount` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-24T18:22:48+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.206012s][吞吐率：4.85req/s] [内存消耗：1,736.45kb] [文件加载：41]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 0 ORDER BY `discount` DESC [ RunTime:0.000000s ]
+[ error ] [2]array_unshift() expects parameter 1 to be array, string given[D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php:110]
+---------------------------------------------------------------
+[ 2018-07-24T18:23:01+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.231014s][吞吐率：4.33req/s] [内存消耗：1,698.92kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 0 ORDER BY `discount` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-24T18:23:18+08:00 ] 127.0.0.1 GET /index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id%20=%201&p_id%20=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.014000s][吞吐率：71.43req/s] [内存消耗：900.10kb] [文件加载：28]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id_' => ' 1',
+  'p_id_' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-24T18:23:29+08:00 ] 127.0.0.1 GET /index?r_id=%201&p_id=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id=%201&p_id=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.014000s][吞吐率：71.43req/s] [内存消耗：900.07kb] [文件加载：28]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id' => ' 1',
+  'p_id' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-24T18:23:39+08:00 ] 127.0.0.1 GET /index?r_id=%201&p_id=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3
+[ info ] www.fen.com/index?r_id=%201&p_id=%202&nick=wded&code=213213ewfdfcdsfdf&avaurl=http:sdafadsfdsf&sex=%E5%A5%B3 [运行时间：0.013001s][吞吐率：76.92req/s] [内存消耗：900.63kb] [文件加载：28]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r_id' => ' 1',
+  'p_id' => ' 2',
+  'nick' => 'wded',
+  'code' => '213213ewfdfcdsfdf',
+  'avaurl' => 'http:sdafadsfdsf',
+  'sex' => '女',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File

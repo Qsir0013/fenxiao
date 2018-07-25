@@ -50,16 +50,21 @@ class User extends Rest
     /*个人订单*/
     public function order($id){
         $select = findMore('order',[],'id,number,pro,num,total,logistics_static,create_time,is_delete',['user_id'=>$id],'','');
-        foreach($select as $k =>$item){
-            $select_pro = findone('pro',[],'title,price,banner,content',['id'=>$item['pro']]);
-            $item['pro_item'] = $select_pro;
-            $data[] = $item;
-        }
-        if($data){
-            echo json(200,$data);
+        if($select){
+            foreach($select as $k =>$item){
+                $select_pro = findone('pro',[],'title,price,banner,content',['id'=>$item['pro']]);
+                $item['pro_item'] = $select_pro;
+                $data[] = $item;
+            }
+            if($data){
+                echo json(200,$data);
+            }else{
+                echo json(404,'');
+            }
         }else{
             echo json(404,'');
         }
+
     }
     /*我的授权信息*/
     public function authorize($id)

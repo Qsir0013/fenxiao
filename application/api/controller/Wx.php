@@ -21,7 +21,7 @@ class Wx extends Rest
         $notify_url =   'http://www.fen.com/wxSpeech';//回调的url【自己填写】';
         $openid =       openId($request->param('code'));//'用户的openid【自己填写】';
         $out_trade_no = $request->param('number');//商户订单号
-        $spbill_create_ip = '192.168.1.196';//'服务器的ip【自己填写】';
+        $spbill_create_ip = '118.190.210.33';//'服务器的ip【自己填写】';
         $total_fee =    $fee;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
         $trade_type = 'JSAPI';//交易类型 默认
         //这里是按照顺序的 因为下面的签名是按照顺序 排序错误 肯定出错
@@ -91,7 +91,7 @@ class Wx extends Rest
     public function Wx_Chongzhi(){
         $request=Request::instance();
         $fee=$request->param('total');
-        $details= "余额充值";//商品的名称
+        $details= $request->param('user_id');//商品的名称
         $program = config('pay');
         $appid =        $program['app_id'];//appid
         $body =        $details;// '商品信息';//'【自己填写】'
@@ -99,8 +99,8 @@ class Wx extends Rest
         $nonce_str =    $this->nonce_str();//随机字符串
         $notify_url =   'http://www.fen.com/chongzhi';//回调的url【自己填写】';
         $openid =       openId($request->param('code'));//'用户的openid【自己填写】';
-        $out_trade_no = $request->param('user_id');//商户订单号
-        $spbill_create_ip = '192.168.1.196';//'服务器的ip【自己填写】';
+        $out_trade_no = $this->nonce_str();//商户订单号
+        $spbill_create_ip = '118.190.210.33';//'服务器的ip【自己填写】';
         $total_fee =    $fee;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
         $trade_type = 'JSAPI';//交易类型 默认
         //这里是按照顺序的 因为下面的签名是按照顺序 排序错误 肯定出错
@@ -141,6 +141,21 @@ class Wx extends Rest
         $xml = postXmlCurl($post_xml,$url);
         $array = $this->xml($xml);//全要大写
         if($array['RETURN_CODE'] == 'SUCCESS' && $array['RESULT_CODE'] == 'SUCCESS'){
+            $result = Db::execute('update fen_user set money = money + '.$total_fee.' where id = '.$request->param('user_id'));
+            /*
+            * 首先判断，订单是否已经更新为ok，因为微信会总共发送8次回调确认
+            * 其次，订单已经为ok的，直接返回SUCCESS
+            * 最后，订单没有为ok的，更新状态为ok，返回SUCCESS
+            */
+            if($result){
+                $data = [
+                    'user_id'=>$request->param('user_id'),
+                    'event'=>'购买商品:支出'.$total_fee.'元',
+                    'money'=>$total_fee,
+                    'create_time'=>date('Y-m-d : H:i:s')
+                ];
+                addId('transaction',$data);
+            }
             $time = time();
             $tmp=[];//临时数组用于签名
             $tmp['appId'] = $appid;
@@ -184,7 +199,7 @@ class Wx extends Rest
         $arr['amount'] = $request['money'];//提现金额，单位为分
         $desc = "返现提现";
         $arr['desc'] = $desc;//描述信息
-        $arr['spbill_create_ip'] = '192.168.0.196';//获取服务器的ip
+        $arr['spbill_create_ip'] = '118.190.210.33';//获取服务器的ip
         $arr['sign'] = $this->tixianSign($arr);//签名
         $var = $this->arraytoxml($arr);
 
@@ -199,11 +214,18 @@ class Wx extends Rest
 
         if ($return_code == 'SUCCESS' && $result_code == 'SUCCESS') {
             Db::startTrans();
-            $result = Db::execute('update `fen_user` set balance = balance - '.$request['money'].' where id = '.$request['user_id']);
+            $money = findone("user",[],'balance',['id'=>$request['user_id']]);
+            if($money['balance'] < $request['money']){
+                $diff = $money['balance']-$request['money'];
+                Db::execute('update `fen_user` set balance = 0  where id = '.$request['user_id']);
+                $request = Db::execute('update `fen_user` set money = money - '.$diff.' where id = '.$request['user_id']);
+            }else{
+                $result = Db::execute('update `fen_user` set balance = balance - '.$request['money'].' where id = '.$request['user_id']);
+            }
             if($result){
                 $data = [
                     'user_id'=>$request['user_id'],
-                    'event'=>'提现返现:支出'.$request['money'].'元',
+                    'event'=>'提现:支出'.$request['money'].'元',
                     'money'=>$request['money'],
                     'create_time'=>date('Y-m-d : H:i:s')
                 ];
