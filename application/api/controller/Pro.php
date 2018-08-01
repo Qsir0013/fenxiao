@@ -19,7 +19,7 @@ class Pro extends Rest
         $pro = findMore('pro',[],'id,title,price,banner,des','','','');
         if($pro){
             foreach($pro as $v){
-                $v['price'] = $v['price']* ($discount['discount']/100);
+                $v['price'] = round($v['price']* ($discount['discount']/100),2);;
                 $pro1[]  = $v;
             }
             if ($pro1) {
@@ -41,7 +41,7 @@ class Pro extends Rest
         $discount = findone('user',$join,'ag.discount',['a.id'=>$id['user_id']]);
         $pro = findone('pro',[],'id,title,price,banner,content,des',['id'=>$id['pro_id']]);
         if($pro){
-            $pro['price'] = $pro['price']* ($discount['discount']/100);
+            $pro['price'] = round($pro['price']* ($discount['discount']/100),2);
             if ($pro) {
                 echo json(200,$pro);
             } else {
@@ -56,7 +56,7 @@ class Pro extends Rest
     {
         $data = Request::instance()->param();
         $money = findone('user',[],'money,pid',['id'=>$data['user_id']]);
-        if($money['money'] > 500){
+        if($money['money'] > 0.1){
             $data['number'] = date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
             $data['pid'] = $money['pid'];
             $insert = addId('order',$data);
@@ -73,7 +73,7 @@ class Pro extends Rest
     /*订单详情*/
     public function goodsInfo($id)
     {
-        $order = findone('order',[],'id,number,pro,num,total,logistics_static,create_time',['id'=>$id]);
+        $order = findone('order',[],'id,number,pro,num,total,logistics_static,create_time,pay',['id'=>$id]);
         if($order){
             echo json(200,$order);
         }else{
@@ -106,6 +106,7 @@ class Pro extends Rest
                     'create_time'=>date('Y-m-d : H:i:s')
                 ];
                 $insert = addId('transaction',$data);
+                edit("order",['id'=>$id],['pay'=>1]);
                 if($insert){
                     Db::commit();
                     echo json(200,'');
@@ -144,7 +145,7 @@ class Pro extends Rest
 
         $order_status = findone('order',[],'status,user_id,price',['number'=>$post_data['out_trade_no']]);
         if($post_data['return_code']=='SUCCESS'&&$postSign){
-
+            edit("order",['number'=>$post_data['out_trade_no']],['pay'=>1]);
             $data = [
                 'user_id'=>$order_status['user_id'],
                 'event'=>'购买商品:支出'.$order_status['price'].'元',

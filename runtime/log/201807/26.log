@@ -1,0 +1,2186 @@
+---------------------------------------------------------------
+[ 2018-07-26T09:45:23+08:00 ] 127.0.0.1 POST /insertAgent
+[ info ] www.fen.com/insertAgent [运行时间：0.042003s][吞吐率：23.81req/s] [内存消耗：1,057.22kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'insertAgent',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryoCSzJ6g9O2SlWl52',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '753',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'address' => '北京',
+  'agent_id' => '2',
+  'pid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Login->insertAgent[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: code[D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php:123]
+---------------------------------------------------------------
+[ 2018-07-26T09:45:34+08:00 ] 127.0.0.1 POST /insertAgent
+[ info ] www.fen.com/insertAgent [运行时间：0.282016s][吞吐率：3.55req/s] [内存消耗：1,699.74kb] [文件加载：40]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'insertAgent',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJV19KnOacnicd804',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '847',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'address' => '北京',
+  'agent_id' => '2',
+  'pid' => '4',
+  'code' => '212',
+)
+[ info ] [ RUN ] app\api\controller\Login->insertAgent[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_address` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] INSERT INTO `fen_address` (`user_id` , `name` , `phone` , `address`) VALUES (1 , 'zhansgsan' , 15899776548 , '北京') [ RunTime:0.004001s ]
+[ error ] [0]数据表字段不存在:[code][D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2018-07-26T18:56:37+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,042.51kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySAU1mqylD7JMzLKM',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '466',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: user_id[D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php:87]
+---------------------------------------------------------------
+[ 2018-07-26T18:56:59+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.016001s][吞吐率：62.50req/s] [内存消耗：1,042.51kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryVP88xJddnsKDc0iv',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '466',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: user_id[D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php:87]
+---------------------------------------------------------------
+[ 2018-07-26T18:57:04+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,717.77kb] [文件加载：40]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6lyCjdNKjiHzTtru',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '561',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'user_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ error ] [0]数据表字段不存在:[user_id][D:\php\PHPTutorial\WWW\llll\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2018-07-26T18:58:11+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：1,042.76kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryH44ZiWPcB9G17VO8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '753',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'address' => '北京',
+  'agent_id' => '2',
+  'pid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: user_id[D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php:87]
+---------------------------------------------------------------
+[ 2018-07-26T18:58:26+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.016001s][吞吐率：62.50req/s] [内存消耗：1,042.73kb] [文件加载：34]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCXZOsnIU4dpFbee8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '561',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'user_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: user_id[D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php:89]
+---------------------------------------------------------------
+[ 2018-07-26T18:58:57+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.015001s][吞吐率：66.66req/s] [内存消耗：884.13kb] [文件加载：28]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9HMPlE1OcAClV0Da',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '561',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'user_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-26T18:59:19+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,702.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryWq05veBzBvlV5cTW',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '561',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'user_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `username`='zhansgsan',`idcode`='455879633548765489',`weicode`='dsad_12123',`phone`=15899776548,`id`=4  WHERE  `id` = 4 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-07-26T18:59:52+08:00 ] 127.0.0.1 POST /editinfo
+[ info ] www.fen.com/editinfo [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,702.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'editInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryYYkB6ZNMV31APDhB',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'origin' => 'chrome-extension://geobniafmelcledgickglbajofpkllpl',
+  'accept' => '*/*',
+  'content-length' => '561',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhansgsan',
+  'idcode' => '455879633548765489',
+  'weicode' => 'dsad_12123',
+  'phone' => '15899776548',
+  'user_id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->editInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `username`='zhansgsan',`idcode`='455879633548765489',`weicode`='dsad_12123',`phone`=15899776548,`id`=1  WHERE  `id` = 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:00+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=033IQob90eZzAw1H3P990l3kb90IQobb&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=033IQob90eZzAw1H3P990l3kb90IQobb&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.477028s][吞吐率：2.10req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '033IQob90eZzAw1H3P990l3kb90IQobb',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:42:00'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:02+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,700.67kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:02+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.040003s][吞吐率：25.00req/s] [内存消耗：1,682.50kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:32+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=033ztZtg2zr5lB0ye7ug2udkug2ztZtl&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=033ztZtg2zr5lB0ye7ug2udkug2ztZtl&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.222012s][吞吐率：4.50req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '033ztZtg2zr5lB0ye7ug2udkug2ztZtl',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:42:32'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:33+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:33+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:35+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:37+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:37+08:00 ] 192.168.1.181 GET /address/1
+[ info ] www.fen.com/address/1 [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,678.35kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'address',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->address[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_address` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`phone`,`address` FROM `fen_address` `a` WHERE  `user_id` = 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:40+08:00 ] 192.168.1.181 POST /proOrder
+[ info ] www.fen.com/proOrder [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,671.01kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'origin' => 'http://127.0.0.1:15078',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'pro' => '1',
+  'num' => '1',
+  'user_id' => '1',
+  'address_id' => '1',
+  'total' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `money`,`pid` FROM `fen_user` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `fen_order` (`pro` , `num` , `user_id` , `address_id` , `total` , `number` , `pid`) VALUES (1 , 1 , 1 , 1 , 1 , 2.0180726485655E+15 , 0) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:40+08:00 ] 192.168.1.181 GET /goodsInfo/1
+[ info ] www.fen.com/goodsInfo/1 [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,699.95kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'goodsInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->goodsInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`pay` FROM `fen_order` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:40+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:42:40+08:00 ] 192.168.1.181 GET /balance/1
+[ info ] www.fen.com/balance/1 [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,699.40kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'balance',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Team->balance[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `money`,`balance` FROM `fen_user` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:27+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=023q7Q7q1LeJQp0mHr8q1xjI7q1q7Q73&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=023q7Q7q1LeJQp0mHr8q1xjI7q1q7Q73&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.268015s][吞吐率：3.73req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '023q7Q7q1LeJQp0mHr8q1xjI7q1q7Q73',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:43:27'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:29+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.034001s][吞吐率：29.41req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:29+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:32+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.034001s][吞吐率：29.41req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:35+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:35+08:00 ] 192.168.1.181 GET /address/1
+[ info ] www.fen.com/address/1 [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,678.35kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'address',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->address[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_address` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`phone`,`address` FROM `fen_address` `a` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:48+08:00 ] 192.168.1.181 POST /proOrder
+[ info ] www.fen.com/proOrder [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,671.01kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'origin' => 'http://127.0.0.1:15078',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+)
+[ info ] [ PARAM ] array (
+  'pro' => '1',
+  'num' => '1',
+  'user_id' => '1',
+  'address_id' => '1',
+  'total' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `money`,`pid` FROM `fen_user` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `fen_order` (`pro` , `num` , `user_id` , `address_id` , `total` , `number` , `pid`) VALUES (1 , 1 , 1 , 1 , 1 , 2.0180726525558E+15 , 0) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:48+08:00 ] 192.168.1.181 GET /goodsInfo/2
+[ info ] www.fen.com/goodsInfo/2 [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,699.95kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'goodsInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Pro->goodsInfo[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`pay` FROM `fen_order` `a` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:48+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:43:48+08:00 ] 192.168.1.181 GET /balance/1
+[ info ] www.fen.com/balance/1 [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,699.40kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'balance',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Team->balance[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `money`,`balance` FROM `fen_user` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:44:56+08:00 ] 192.168.1.181 GET /pay/2
+[ info ] www.fen.com/pay/2 [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：1,726.91kb] [文件加载：40]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'pay',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Pro->pay[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `total`,`user_id` FROM `fen_order` `a` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `money` FROM `fen_user` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] update fen_user set money = money - 1 where id = 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_transaction` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `fen_transaction` (`user_id` , `event` , `money` , `create_time`) VALUES (1 , '购买商品:支出1元' , 1 , '2018-07-26 : 19:44:56') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `fen_order`  SET `pay`=1  WHERE  `id` = 2 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:45:17+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.034001s][吞吐率：29.41req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:48+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=0331ji3D0f6CEd2f8O3D0Mxo3D01ji3V&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=0331ji3D0f6CEd2f8O3D0Mxo3D01ji3V&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.236013s][吞吐率：4.24req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '0331ji3D0f6CEd2f8O3D0Mxo3D01ji3V',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:49:48'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:50+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:50+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:51+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:52+08:00 ] 192.168.1.181 GET /address/1
+[ info ] www.fen.com/address/1 [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,678.35kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'address',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->address[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_address` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`phone`,`address` FROM `fen_address` `a` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:49:52+08:00 ] 192.168.1.181 GET /proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D
+[ info ] www.fen.com/proDes/%7B%20%22user_id%22:%201,%20%22pro_id%22:%201%20%7D [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,703.55kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proDes',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{ "user_id": 1, "pro_id": 1 }',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proDes[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`content`,`des` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:50:00+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:00+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=033ZGBo42kPy1M0jlar42hAco42ZGBoY&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=033ZGBo42kPy1M0jlar42hAco42ZGBoY&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.251014s][吞吐率：3.98req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '033ZGBo42kPy1M0jlar42hAco42ZGBoY',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:52:00'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:01+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:01+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:04+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:45+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=023iBYFN1mN5J21mgrDN18DZFN1iBYFo&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=023iBYFN1mN5J21mgrDN18DZFN1iBYFo&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.524030s][吞吐率：1.91req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '023iBYFN1mN5J21mgrDN18DZFN1iBYFo',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:52:45'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:46+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:46+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:52:50+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:28+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=0336k7ub0KaLgu1Gqcub0nU4ub06k7uc&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2
+[ info ] www.fen.com/index/?p_id=&r_id=&code=0336k7ub0KaLgu1Gqcub0nU4ub06k7uc&nick=%E5%80%A9%E5%80%A9&avaurl=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2F62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA%2F132&sex=2 [运行时间：0.260015s][吞吐率：3.85req/s] [内存消耗：1,665.73kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '0336k7ub0KaLgu1Gqcub0nU4ub06k7uc',
+  'nick' => '倩倩',
+  'avaurl' => 'https://wx.qlogo.cn/mmopen/vi_32/62PzP5iaaDZ8eBheYvTPro1bficnInLcLOgrNce2xl2BI4FnTlYHsCj7ibVkr4jF9dvEJL3Rs658dsUvqibX9GzWgA/132',
+  'sex' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:53:28'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:30+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.038003s][吞吐率：26.31req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:30+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:34+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:53+08:00 ] 192.168.1.181 GET /index/?p_id=&r_id=&code=023FkdNW0FwaJU11qwMW0Z2sNW0FkdNG&nick=undefined&avaurl=undefined&sex=undefined
+[ info ] www.fen.com/index/?p_id=&r_id=&code=023FkdNW0FwaJU11qwMW0Z2sNW0FkdNG&nick=undefined&avaurl=undefined&sex=undefined [运行时间：0.241014s][吞吐率：4.15req/s] [内存消耗：1,664.95kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'p_id' => '',
+  'r_id' => '',
+  'code' => '023FkdNW0FwaJU11qwMW0Z2sNW0FkdNG',
+  'nick' => 'undefined',
+  'avaurl' => 'undefined',
+  'sex' => 'undefined',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`agent_id`,`openid`,`pid` FROM `fen_user` `a` WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_agent` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`discount` FROM `fen_agent` `a` WHERE  `id` <= 2 ORDER BY `discount` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `fen_user`  SET `login_time`='2018-07-26 19:53:53'  WHERE  `openid` = 'oHpuZ5Ths0LY6GDWEVBybZ6RfnxI' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:54+08:00 ] 192.168.1.181 GET /proList/1
+[ info ] www.fen.com/proList/1 [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,700.87kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Pro',
+    2 => 'proList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pro->proList[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Pro.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price`,`banner`,`des` FROM `fen_pro` `a` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:54+08:00 ] 192.168.1.181 GET /infoperson/1
+[ info ] www.fen.com/infoperson/1 [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,682.52kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'infoPerson',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->infoPerson[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`username`,`a`.`img`,`ag`.`name`,`a`.`idcode`,`a`.`weicode`,`a`.`phone`,`ad`.`address`,`a`.`sex` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` INNER JOIN `fen_address` `ad` ON `a`.`id`=`ad`.`user_id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-07-26T19:53:58+08:00 ] 192.168.1.181 GET /order/1
+[ info ] www.fen.com/order/1 [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,682.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'User',
+    2 => 'order',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wxfc7a0ffe1fd98ca2/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1807200 MicroMessenger/6.5.7 Language/zh_CN webview/',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\User->order[ D:\php\PHPTutorial\WWW\llll\application\api\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`number`,`pro`,`num`,`total`,`logistics_static`,`create_time`,`is_delete`,`pay` FROM `fen_order` `a` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]

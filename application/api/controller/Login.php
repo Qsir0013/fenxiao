@@ -96,82 +96,73 @@ class Login extends Rest
     public function index()
     {
         $data = $_GET;
-	    $str = '""';
-        if ($data['p_id']===$str && $data['r_id']===$str) {//搜索进入，无上级二维码
-	        $code = $data['code'];
-            $openid = openId($code);
-            $find = findone('user',[],'id,username,agent_id,openid,pid',['openid'=>$openid]);
-			if($find){
-				$map['id']  = ['<=',$find['agent_id']];
-				$agentList = findMore('agent',[],'id,name,discount',$map,'discount ','');
-				edit('user',['openid'=>$openid],['login_time'=>date("Y-m-d H:i:s")]);
-                echo json(200,['index'=>2,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id'],'agent'=>$agentList]);
-			}else{
-				$udata['wxname'] = $data['nick'];
-				$udata['openid'] = $openid; 
-				$udata['img'] = $data['avaurl'];
-				$udata['sex'] = $data['sex'];
-				$userId = addId('user',$udata);
-                echo json(200,['index'=>1,'p_id'=>'','r_id'=>1 ,'user_id'=>$userId,'agent'=>'']);
-            }
-        }else{//扫码进入
-            $code = $data['code'];
-            $openid = openId($code);
-            $data['openid'] = $openid;
-            $find = findone('user',[],'id,username,agent_id',['openid'=>$openid]);
-	        $data['scene'] = isset($data['scene'])?$data['scene']:$find['id']."&1";
-            $a = explode("&",$data['scene']);
-            $user_id = $a[0];
-            $level = $a[1];
-            $map['id']  = ['<=',$find['agent_id']];
-            $agentList = findMore('agent',[],'id,name,discount',$map,'discount ','');
-            $arr = [
-                'id'=> 0,
-                'name' =>'请选择',
-                'discount' =>0
-            ];
-            if($agentList!=''){
-                array_unshift($agentList,$arr);
-            }
-            if($find){
-                echo json(200,['index'=>2,'p_id'=>$user_id,'r_id'=>$level,'user_id'=>$find['id'],'agent'=>$agentList]);
+		$code = $data['code'];
+		$openid = openId($code);
+        unset($data['code']);
+		$find = findone('user',[],'id,username,agent_id,openid,pid',['openid'=>$openid]);
+		if($find){
+			$map['id']  = ['<=',$find['agent_id']];
+			$agentList = findMore('agent',[],'id,name,discount',$map,'discount ','');
+			edit('user',['openid'=>$openid],['login_time'=>date("Y-m-d H:i:s")]);
+            if($find['agent_id'] == 1){
+                echo json(200,['index'=>1,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id'],'agent'=>$agentList]);
             }else{
-                $arr['openid'] = $openid;
-                $nick = $_GET['nick'];
-                $imgUrl = $_GET['avaurl'];
-                $sex = $_GET['sex'];
-                $arr['wxname'] = $nick;
-                $arr['img'] = $imgUrl;
-                $arr['sex'] = $sex;
-//                $insert = addId('user', $arr);
-//                if($insert){
-                echo json(200,['index'=>1,'p_id'=>$user_id,'r_id'=>$level,'agent'=>'']);
-//                }else{
-//                    echo json(202,'');
-//                }
+                echo json(200,['index'=>2,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id'],'agent'=>$agentList]);
             }
-        }
+		}else{
+			$udata['wxname'] = $data['nick'];
+			$udata['openid'] = $openid; 
+			$udata['img'] = $data['avaurl'];
+			$udata['sex'] = $data['sex'];
+			$userId = addId('user',$udata);
+			echo json(200,['index'=>1,'p_id'=>'','r_id'=>1 ,'user_id'=>$userId,'agent'=>'']);
+		}
     }
     /*注册代理商*/
     public function insertAgent(){
         $data = Request::instance()->param();
-        $data['create_time'] = date('Y-m-d : H:i:s');
-        $address = $data['address'];
-        unset($data['address']);
-        $insert = addId('user', $data);
-        $addressArr = [
-            'user_id'=>$insert,
-            'name'=>$data['username'],
-            'phone'=>$data['phone'],
-            'address'=>$address,
-            'create_time'=>date('Y-m-d : H:i:s')
-        ];
-        $insert1 = addId('address', $addressArr);
-        if ($insert && $insert1) {
-            echo json(200, ['user_id'=>$insert]);
-        } else {
-            echo json(202, '');
-        }
+		$code = $data['code'];
+		$openid = openId($code);
+        unset($data['code']);
+		$find = findone('user',[],'id,username,agent_id,openid,pid',['openid'=>$openid]);
+		if($find){
+			$address = $data['address'];
+			$addressArr = [
+				'user_id'=>$find['id'],
+				'name'=>$data['username'],
+				'phone'=>$data['phone'],
+				'address'=>$address
+			];
+			$addressId = addId('address', $addressArr);
+			unset($data['address']);
+			$changeInfo = edit('user',['openid'=>$openid],$data);
+			if($addressId && $changeInfo){
+                if($find['agent_id'] == 1){
+                    echo json(200,['index'=>1,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id']]);
+                }else{
+                    echo json(200,['index'=>2,'p_id'=>$find['pid'],'r_id'=>$find['agent_id'],'user_id'=>$find['id']]);
+                }
+			} else {
+				echo json(202, '');
+			}
+		}else{
+			$address = $data['address'];
+			unset($data['address']);
+			$insert = addId('user', $data);
+			$addressArr = [
+				'user_id'=>$insert,
+				'name'=>$data['username'],
+				'phone'=>$data['phone'],
+				'address'=>$address,
+				'create_time'=>date('Y-m-d : H:i:s')
+			];
+			$insert1 = addId('address', $addressArr);
+			if ($insert && $insert1) {
+				echo json(200, ['user_id'=>$insert]);
+			} else {
+				echo json(202, '');
+			}
+		}
     }
     /*上级审核通过*/
     public function pass($id){

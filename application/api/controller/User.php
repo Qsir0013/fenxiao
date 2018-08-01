@@ -8,19 +8,14 @@ use think\controller\Rest;
 header('Access-Control-Allow-Origin:*');
 class User extends Rest
 {
-    public function rest()
-    {
-
-    }
     /*个人信息*/
     public function infoPerson($id)
     {
         $id = Request::instance()->param();
         $join = [
             ['agent ag','a.agent_id = ag.id'],
-            ['address ad','a.id = ad.user_id']
         ];
-        $find = findone('user',$join,'a.username,a.img,ag.name,a.idcode,a.weicode,a.phone,ad.address,a.sex',['a.id'=>$id['id']]);
+        $find = findone('user',$join,'a.username,ag.name,a.idcode,a.weicode,a.phone,a.static',['a.id'=>$id['id']]);
         if ($find) {
             echo json(200,$find);
         } else {
@@ -49,7 +44,7 @@ class User extends Rest
     }
     /*个人订单*/
     public function order($id){
-        $select = findMore('order',[],'id,number,pro,num,total,logistics_static,create_time,is_delete',['user_id'=>$id],'','');
+        $select = findMore('order',[],'id,number,pro,num,total,logistics_static,create_time,is_delete,pay',['user_id'=>$id],'id desc','');
         if($select){
             foreach($select as $k =>$item){
                 $select_pro = findone('pro',[],'title,price,banner,content',['id'=>$item['pro']]);
@@ -78,6 +73,19 @@ class User extends Rest
             echo json(200,$find);
         } else {
             echo json(404, '');
+        }
+    }
+    /*修改个人信息*/
+    public function editInfo()
+    {
+        $data = Request::instance()->param();
+        $data['id'] = $data['user_id'];
+        unset($data['user_id']);
+        $edit = edit('user',['id'=>$data['id']],$data);
+        if($edit){
+            echo json(200,'');
+        } else {
+            echo json(202, '');
         }
     }
 

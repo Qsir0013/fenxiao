@@ -22,7 +22,7 @@ class Wx extends Rest
         $openid =       openId($request->param('code'));//'用户的openid【自己填写】';
         $out_trade_no = $request->param('number');//商户订单号
         $spbill_create_ip = '118.190.210.33';//'服务器的ip【自己填写】';
-        $total_fee =    $fee;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
+        $total_fee =    $fee*100;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
         $trade_type = 'JSAPI';//交易类型 默认
         //这里是按照顺序的 因为下面的签名是按照顺序 排序错误 肯定出错
         $post['appid'] = $appid;
@@ -101,7 +101,7 @@ class Wx extends Rest
         $openid =       openId($request->param('code'));//'用户的openid【自己填写】';
         $out_trade_no = $this->nonce_str();//商户订单号
         $spbill_create_ip = '118.190.210.33';//'服务器的ip【自己填写】';
-        $total_fee =    $fee;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
+        $total_fee =    $fee*100;//因为充值金额最小是1 而且单位为分 如果是充值1元所以这里需要*100
         $trade_type = 'JSAPI';//交易类型 默认
         //这里是按照顺序的 因为下面的签名是按照顺序 排序错误 肯定出错
         $post['appid'] = $appid;
@@ -141,7 +141,7 @@ class Wx extends Rest
         $xml = postXmlCurl($post_xml,$url);
         $array = $this->xml($xml);//全要大写
         if($array['RETURN_CODE'] == 'SUCCESS' && $array['RESULT_CODE'] == 'SUCCESS'){
-            $result = Db::execute('update fen_user set money = money + '.$total_fee.' where id = '.$request->param('user_id'));
+            $result = Db::execute('update fen_user set money = money + '.$fee.' where id = '.$request->param('user_id'));
             /*
             * 首先判断，订单是否已经更新为ok，因为微信会总共发送8次回调确认
             * 其次，订单已经为ok的，直接返回SUCCESS
@@ -150,8 +150,8 @@ class Wx extends Rest
             if($result){
                 $data = [
                     'user_id'=>$request->param('user_id'),
-                    'event'=>'购买商品:支出'.$total_fee.'元',
-                    'money'=>$total_fee,
+                    'event'=>'充值:充值'.$fee.'元',
+                    'money'=>$fee,
                     'create_time'=>date('Y-m-d : H:i:s')
                 ];
                 addId('transaction',$data);
@@ -196,7 +196,7 @@ class Wx extends Rest
         $arr['partner_trade_no'] = '1298016501' . date("Ymd") . rand(10000, 90000) . rand(10000, 90000);//商户订单号
         $arr['openid'] = $openid;
         $arr['check_name'] = 'NO_CHECK';//是否验证用户真实姓名，这里不验证
-        $arr['amount'] = $request['money'];//提现金额，单位为分
+        $arr['amount'] = $request['money']*100;//提现金额，单位为分
         $desc = "返现提现";
         $arr['desc'] = $desc;//描述信息
         $arr['spbill_create_ip'] = '118.190.210.33';//获取服务器的ip
@@ -225,7 +225,7 @@ class Wx extends Rest
             if($result){
                 $data = [
                     'user_id'=>$request['user_id'],
-                    'event'=>'提现:支出'.$request['money'].'元',
+                    'event'=>'提现:提现'.$request['money'].'元',
                     'money'=>$request['money'],
                     'create_time'=>date('Y-m-d : H:i:s')
                 ];

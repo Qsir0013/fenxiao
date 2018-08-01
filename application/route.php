@@ -20,6 +20,7 @@ Route::rule('/detail/:id','api/User/detail'); //个人账单
 Route::get('/address/:id','api/User/address'); //个人收货地址
 Route::rule('/order/:id','api/User/order'); //个人订单列表
 Route::rule('/authorize/:id','api/User/authorize'); //我的授权信息
+Route::rule('/editinfo','api/User/editInfo'); //我的授权信息
 
 /*团队管理*/
 Route::rule('/myAgent/:id','api/Team/myAgent'); //个人信息

@@ -1,0 +1,536 @@
+---------------------------------------------------------------
+[ 2018-07-31T11:07:16+08:00 ] 127.0.0.1 GET /auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D
+[ info ] www.fen.com/auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D [运行时间：0.066003s][吞吐率：15.15req/s] [内存消耗：1,647.40kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{"user_id":"72","order_id":"49"}',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `a`.`user_id`,ag.id as agent_id,`a`.`total`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `u`.`id`=`a`.`user_id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '49' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:07:37+08:00 ] 127.0.0.1 GET /auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D
+[ info ] www.fen.com/auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,647.45kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{"user_id":"72","order_id":"49"}',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `a`.`user_id`,ag.id as agent_id,`a`.`total`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `u`.`id`=`a`.`user_id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '49' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:08:18+08:00 ] 127.0.0.1 GET /auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D
+[ info ] www.fen.com/auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,611.74kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{"user_id":"72","order_id":"49"}',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`user_id`,ag.id as agent_id,`a`.`total`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `u`.`id`=`a`.`user_id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '49' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] update `fen_user` set balance = balance + 156 where id = 72 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:08:48+08:00 ] 127.0.0.1 GET /auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D
+[ info ] www.fen.com/auditingOrder/%7B%22user_id%22:%2272%22,%22order_id%22:%2249%22%7D [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,611.74kb] [文件加载：35]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{"user_id":"72","order_id":"49"}',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `a`.`user_id`,ag.id as agent_id,`a`.`total`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `u`.`id`=`a`.`user_id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '49' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] update `fen_user` set balance = balance + 156 where id = 72 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:29:44+08:00 ] 127.0.0.1 GET /auditingOrderd/72
+[ info ] www.fen.com/auditingOrderd/72 [运行时间：0.042003s][吞吐率：23.81req/s] [内存消耗：1,741.30kb] [文件加载：41]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrderd',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrderd[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`pay`,`u`.`username`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: total[D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php:86]
+---------------------------------------------------------------
+[ 2018-07-31T11:30:18+08:00 ] 127.0.0.1 GET /auditingOrderd/72
+[ info ] www.fen.com/auditingOrderd/72 [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,708.64kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrderd',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrderd[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`pay`,`u`.`username`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:30:51+08:00 ] 127.0.0.1 GET /auditingOrderd/72
+[ info ] www.fen.com/auditingOrderd/72 [运行时间：0.039003s][吞吐率：25.64req/s] [内存消耗：1,709.42kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrderd',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrderd[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`pay`,`u`.`username`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:31:42+08:00 ] 127.0.0.1 GET /auditingOrderd/72
+[ info ] www.fen.com/auditingOrderd/72 [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,709.42kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrderd',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrderd[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`pay`,`u`.`username`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:32:16+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,700.84kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:32:43+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,700.84kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:32:44+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,700.84kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:33:03+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,703.48kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:33:47+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,742.17kb] [文件加载：41]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: discount[D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php:62]
+---------------------------------------------------------------
+[ 2018-07-31T11:34:12+08:00 ] 127.0.0.1 GET /orderTeam/72
+[ info ] www.fen.com/orderTeam/72 [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,710.66kb] [文件加载：37]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'orderTeam',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '72',
+)
+[ info ] [ RUN ] app\api\controller\Team->orderTeam[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`number`,`a`.`pro`,`a`.`num`,`total`,`logistics_static`,`a`.`create_time`,`is_delete`,`u`.`username`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `a`.`user_id`=`u`.`id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`pid` = '72'  AND `a`.`is_delete` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '72' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_pro` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`price`,`banner`,`content` FROM `fen_pro` `a` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-07-31T11:57:35+08:00 ] 127.0.0.1 GET /auditingOrder/%7B%22user_id%22:%2289%22,%22order_id%22:%2254%22%7D
+[ info ] www.fen.com/auditingOrder/%7B%22user_id%22:%2289%22,%22order_id%22:%2254%22%7D [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,743.28kb] [文件加载：41]
+[ info ] [ LANG ] D:\php\PHPTutorial\WWW\llll\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Team',
+    2 => 'auditingOrder',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.fen.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '{"user_id":"89","order_id":"54"}',
+)
+[ info ] [ RUN ] app\api\controller\Team->auditingOrder[ D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cosmetics;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `a`.`user_id`,ag.id as agent_id,`a`.`total`,`ag`.`discount` FROM `fen_order` `a` INNER JOIN `fen_user` `u` ON `u`.`id`=`a`.`user_id` INNER JOIN `fen_agent` `ag` ON `u`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '54' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fen_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT a.id as user_id,ag.id as agent_id,`a`.`pid`,`ag`.`discount` FROM `fen_user` `a` INNER JOIN `fen_agent` `ag` ON `a`.`agent_id`=`ag`.`id` WHERE  `a`.`id` = '89' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Division by zero[D:\php\PHPTutorial\WWW\llll\application\api\controller\Team.php:172]
